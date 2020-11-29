@@ -1,0 +1,1210 @@
+
+
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://wiki.xwdidi.top/buy_someting/gh60/3_gh60_install/">
+      
+      
+        <meta name="author" content="aWei">
+      
+      <link rel="shortcut icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.4.0">
+    
+    
+      
+        <title>0x03 GH60的拼装</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.fe0cca5b.min.css">
+      
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.a46bcfb3.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="#7e57c2">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="https://wiki.xwdidi.top" title="aWei's Wiki" class="md-header-nav__button md-logo" aria-label="aWei's Wiki">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            aWei's Wiki
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              0x03 GH60的拼装
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://wiki.xwdidi.top" title="aWei's Wiki" class="md-nav__button md-logo" aria-label="aWei's Wiki">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    aWei's Wiki
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    
+    <label class="md-nav__link" for="nav-1">
+      选购商品
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="选购商品" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        选购商品
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-1" type="checkbox" id="nav-1-1" checked>
+    
+    <label class="md-nav__link" for="nav-1-1">
+      GH60 客制化键盘
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="GH60 客制化键盘" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        GH60 客制化键盘
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../1_gh60_edition/" title="0x01 GH60的各种版本" class="md-nav__link">
+      0x01 GH60的各种版本
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../2_gh60_Materials/" title="0x02 GH60的零件清单" class="md-nav__link">
+      0x02 GH60的零件清单
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        0x03 GH60的拼装
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9h14V7H3v2m0 4h14v-2H3v2m0 4h14v-2H3v2m16 0h2v-2h-2v2m0-10v2h2V7h-2m0 6h2v-2h-2v2z"/></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="0x03 GH60的拼装" class="md-nav__link md-nav__link--active">
+      0x03 GH60的拼装
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pcb" class="md-nav__link">
+    PCB+灯珠+卫星轴
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    茶轴
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    键帽
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    安装
+  </a>
+  
+    <nav class="md-nav" aria-label="安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    减震
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    成品
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    刷固件
+  </a>
+  
+    <nav class="md-nav" aria-label="刷固件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    配列:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fn" class="md-nav__link">
+    Fn设置:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led" class="md-nav__link">
+    LED设置:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    工具:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-2" type="checkbox" id="nav-1-2">
+    
+    <label class="md-nav__link" for="nav-1-2">
+      烤箱
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="烤箱" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        烤箱
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../oven_%E5%BE%AE%E6%B3%A2%E7%82%89/1_oven_knowledge/" title="烤箱选购" class="md-nav__link">
+      烤箱选购
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../oven_%E5%BE%AE%E6%B3%A2%E7%82%89/2_oven_experience/" title="使用心得" class="md-nav__link">
+      使用心得
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1-3" type="checkbox" id="nav-1-3">
+    
+    <label class="md-nav__link" for="nav-1-3">
+      厨刀
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="厨刀" data-md-level="2">
+      <label class="md-nav__title" for="nav-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        厨刀
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../knife/knife/" title="厨刀推荐" class="md-nav__link">
+      厨刀推荐
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
+    
+    <label class="md-nav__link" for="nav-2">
+      计算机
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="计算机" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        计算机
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1" type="checkbox" id="nav-2-1">
+    
+    <label class="md-nav__link" for="nav-2-1">
+      信息安全
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="信息安全" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        信息安全
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-1" type="checkbox" id="nav-2-1-1">
+    
+    <label class="md-nav__link" for="nav-2-1-1">
+      逆向工程
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="逆向工程" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        逆向工程
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-1-1" type="checkbox" id="nav-2-1-1-1">
+    
+    <label class="md-nav__link" for="nav-2-1-1-1">
+      恶意软件
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="恶意软件" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-1-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        恶意软件
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-1-1-1" type="checkbox" id="nav-2-1-1-1-1">
+    
+    <label class="md-nav__link" for="nav-2-1-1-1-1">
+      YARA
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="YARA" data-md-level="5">
+      <label class="md-nav__title" for="nav-2-1-1-1-1">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        YARA
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../computer/security/RE/malware/YARA/creating_yara/" title="编写Yara规则检测恶意软件" class="md-nav__link">
+      编写Yara规则检测恶意软件
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../computer/security/RE/malware/YARA/yara_docs/" title="官方文档" class="md-nav__link">
+      官方文档
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../computer/security/RE/malware/YARA/Kaspersky_yara_note/" title="卡巴斯基yara笔记" class="md-nav__link">
+      卡巴斯基yara笔记
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../computer/security/RE/office_cve/" title="Office常见CVE" class="md-nav__link">
+      Office常见CVE
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-2" type="checkbox" id="nav-2-1-2">
+    
+    <label class="md-nav__link" for="nav-2-1-2">
+      威胁情报
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="威胁情报" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        威胁情报
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../computer/security/threat_intelligence/awesome-threat-intelligence/" title="威胁情报大合集" class="md-nav__link">
+      威胁情报大合集
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-2-2" type="checkbox" id="nav-2-1-2-2">
+    
+    <label class="md-nav__link" for="nav-2-1-2-2">
+      OSINT
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="OSINT" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-1-2-2">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        OSINT
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../computer/security/threat_intelligence/OSINT/bookmarks_menu/" title="OSINT 书签" class="md-nav__link">
+      OSINT 书签
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../computer/security/threat_intelligence/OSINT/OSINT_framework/" title="OSINT 框架" class="md-nav__link">
+      OSINT 框架
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-2-3" type="checkbox" id="nav-2-1-2-3">
+    
+    <label class="md-nav__link" for="nav-2-1-2-3">
+      APT
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="APT" data-md-level="4">
+      <label class="md-nav__title" for="nav-2-1-2-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        APT
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../computer/security/threat_intelligence/APT/APT%26TTPs/" title="APT 分析及 TTPs 提取" class="md-nav__link">
+      APT 分析及 TTPs 提取
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2-1-3" type="checkbox" id="nav-2-1-3">
+    
+    <label class="md-nav__link" for="nav-2-1-3">
+      Web
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Web" data-md-level="3">
+      <label class="md-nav__title" for="nav-2-1-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        Web
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../computer/security/WEB/Practice_platform/" title="Web练习平台" class="md-nav__link">
+      Web练习平台
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+    
+    <label class="md-nav__link" for="nav-3">
+      工具
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59 16.58L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.42z"/></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="工具" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+        </span>
+        工具
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Tool/keyboard_shortcuts/" title="工具快捷键" class="md-nav__link">
+      工具快捷键
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Tool/Tools/" title="工具整理" class="md-nav__link">
+      工具整理
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../../Tool/common_code/" title="常用调试代码" class="md-nav__link">
+      常用调试代码
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#pcb" class="md-nav__link">
+    PCB+灯珠+卫星轴
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    茶轴
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    键帽
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    安装
+  </a>
+  
+    <nav class="md-nav" aria-label="安装">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    减震
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    成品
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    刷固件
+  </a>
+  
+    <nav class="md-nav" aria-label="刷固件">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    配列:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fn" class="md-nav__link">
+    Fn设置:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#led" class="md-nav__link">
+    LED设置:
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    工具:
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <h1 id="_1">零件一览<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h3 id="pcb">PCB+灯珠+卫星轴<a class="headerlink" href="#pcb" title="Permanent link">&para;</a></h3>
+<p><img alt="img" src="../../../assets/img/gh60/gh60_1.JPG" /></p>
+<h3 id="_2">茶轴<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p><img alt="img" src="../../../assets/img/gh60/gh60_2.JPG" /></p>
+<h3 id="_3">键帽<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p><img alt="img" src="../../../assets/img/gh60/gh60_3.JPG" /></p>
+<h2 id="_4">安装<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<p>PCB板电路测试</p>
+<p><img alt="img" src="../../../assets/img/gh60/gh60_4.png" /></p>
+<p>安装五角轴,上键帽,查看轴是否安装正确.焊接.</p>
+<p><img alt="img" src="../../../assets/img/gh60/gh60_5.JPG" /></p>
+<p>装上灯,将灯脚弯曲接触电路板,测试.这时候要注意正负极是否对应.</p>
+<p>若灯珠都良好,焊接.</p>
+<p><img alt="img" src="../../../assets/img/gh60/gh60_6.jpg" /></p>
+<p>焊接完所有部件,剪去灯脚,正面与背板如图所示.</p>
+<p><img alt="img" src="../../../assets/img/gh60/gh60_7.jpg" /></p>
+<p><img alt="img" src="../../../assets/img/gh60/gh60_8.jpg" /></p>
+<h3 id="_5">减震<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>卫星轴下方PCB粘上剪裁好的创口贴布.如果有润滑油可以把钢轴两端和卫星轴内部涂抹.</p>
+<p><img alt="img" src="../../../assets/img/gh60/gh60_9.jpg" /></p>
+<p>减少空腔音,装入泡沫纸.</p>
+<p><img alt="img" src="../../../assets/img/gh60/gh60_10.jpg" /></p>
+<h3 id="_6">成品<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>上螺丝 装键帽.</p>
+<p><img alt="img" src="../../../assets/img/gh60/gh60_11.jpg" /></p>
+<h2 id="_7">刷固件<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<p>参考自身的<a href="http://blog.xwdidi.top/2019/10/17/2019-10-17-autohotkey/">autohotkey使用方案</a>,和bgg的<a href="../../buy_someting/gh60/3_gh60_install/[https://noodlefighter.com/post/技术笔记-GH60变身POKER3——仿poker3的TMK格式配列/">仿poker3配列</a>.做了一定程度的调整.</p>
+<ol>
+<li>连接键盘,按背后的reset键</li>
+<li>zadig更换键盘驱动</li>
+<li><a href="http://tkg.io/">http://tkg.io/</a> 输入配列</li>
+<li>点击最下方烧写固件</li>
+</ol>
+<h3 id="_8">配列:<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<p>第0层:</p>
+<div class="highlight"><pre><span></span><code>[&quot;Esc&quot;,&quot;!\n1&quot;,&quot;@\n2&quot;,&quot;#\n3&quot;,&quot;$\n4&quot;,&quot;%\n5&quot;,&quot;^\n6&quot;,&quot;&amp;\n7&quot;,&quot;*\n8&quot;,&quot;(\n9&quot;,&quot;)\n0&quot;,&quot;_\n-&quot;,&quot;+\n=&quot;,{w:2},&quot;Backspace&quot;],
+[{w:1.5},&quot;Tab&quot;,&quot;Q&quot;,&quot;W&quot;,&quot;E&quot;,&quot;R&quot;,&quot;T&quot;,&quot;Y&quot;,&quot;U&quot;,&quot;I&quot;,&quot;O&quot;,&quot;P&quot;,&quot;{\n[&quot;,&quot;}\n]&quot;,{w:1.5},&quot;|\n\\&quot;],
+[{w:1.75},&quot;Fn&quot;,&quot;A&quot;,&quot;S&quot;,&quot;D&quot;,&quot;F&quot;,&quot;G&quot;,&quot;H&quot;,&quot;J&quot;,&quot;K&quot;,&quot;L&quot;,&quot;:\n;&quot;,&quot;\&quot;\n&#39;&quot;,{w:2.25},&quot;Enter&quot;],
+[{w:2.25},&quot;Shift&quot;,&quot;Z&quot;,&quot;X&quot;,&quot;C&quot;,&quot;V&quot;,&quot;B&quot;,&quot;N&quot;,&quot;M&quot;,&quot;&lt;\n,&quot;,&quot;&gt;\n.&quot;,&quot;?\n/&quot;,{w:2.75},&quot;Shift&quot;],
+[{w:1.25},&quot;Ctrl&quot;,{w:1.25},&quot;Win&quot;,{w:1.25},&quot;Alt&quot;,{a:7,w:6.25},&quot;space&quot;,{a:4,w:1.25},&quot;Fn&quot;,{w:1.25},&quot;Alt&quot;,{w:1.25},&quot;Menu&quot;,{w:1.25},&quot;Ctrl&quot;]
+</code></pre></div>
+
+<p>第1层:</p>
+<div class="highlight"><pre><span></span><code>[&quot;~\n`&quot;,&quot;F1&quot;,&quot;F2&quot;,&quot;F3&quot;,&quot;F4&quot;,&quot;F5&quot;,&quot;F6&quot;,&quot;F7&quot;,&quot;F8&quot;,&quot;F9&quot;,&quot;F10&quot;,&quot;F11&quot;,&quot;F12&quot;,{w:2},&quot;Delete&quot;],
+[{a:7,w:1.5},&quot;&quot;,{a:4},&quot;Fn1&quot;,&quot;Fn2&quot;,&quot;Fn3&quot;,&quot;Fn4&quot;,&quot;Fn5&quot;,&quot;Home&quot;,&quot;Fn13&quot;,&quot;Back space&quot;,&quot;Fn14&quot;,&quot;End&quot;,&quot;Fn15&quot;,&quot;Fn16&quot;,{w:1.5},&quot;Fn17&quot;],
+[{w:1.75},&quot;Fn&quot;,{a:4},&quot;Fn6&quot;,&quot;VolDn&quot;,&quot;VolUp&quot;,&quot;Mute&quot;,&quot;Fn7&quot;,&quot;←&quot;,&quot;↓&quot;,&quot;↑&quot;,&quot;→&quot;,&quot;Fn18&quot;,&quot;Fn19&quot;,{w:2.25},&quot;Fn20&quot;],
+[{w:2.25},&quot;&quot;,{a:4},&quot;Fn8&quot;,&quot;Fn9&quot;,&quot;Fn10&quot;,&quot;Fn11&quot;,&quot;Fn12&quot;,&quot;PgUp&quot;,&quot;PgDn&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,{w:2.75},&quot;&quot;],
+[{w:1.25},&quot;Ctrl&quot;,{w:1.25},&quot;Win&quot;,{w:1.25},&quot;Alt&quot;,{a:7,w:6.25},&quot;Fn21&quot;,{a:4,w:1.25},&quot;Fn&quot;,{w:1.25},&quot;caps&quot;,{w:1.25},&quot;Menu&quot;,{w:1.25},&quot;Ctrl&quot;]
+</code></pre></div>
+
+<p>第2层:</p>
+<div class="highlight"><pre><span></span><code>[{a:7},&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,{w:2},&quot;&quot;],
+[{w:1.5},&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,{a:4},&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,{a:7},&quot;&quot;,&quot;&quot;,{w:1.5},&quot;&quot;],
+[{w:1.75},&quot;&quot;,&quot;&quot;,&quot;&quot;,{a:4},&quot;&quot;,&quot;&quot;,{a:7},&quot;&quot;,{a:4},&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,{a:7},&quot;&quot;,{w:2.25},&quot;&quot;],
+[{w:2.25},&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,{a:4},&quot;&quot;,&quot;&quot;,&quot;&quot;,&quot;&quot;,{a:7},&quot;&quot;,{a:4,w:2.75},&quot;↑&quot;],
+[{a:7,w:1.25},&quot;&quot;,{w:1.25},&quot;&quot;,{w:1.25},&quot;&quot;,{a:4,w:6.25},&quot;&quot;,{w:1.25},&quot;&quot;,{a:4,w:1.25},&quot;←&quot;,{w:1.25},&quot;↓&quot;,{w:1.25},&quot;→&quot;]
+</code></pre></div>
+
+<h3 id="fn">Fn设置:<a class="headerlink" href="#fn" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>&quot;0&quot;:[&quot;ACTION_LAYER_MOMENTARY&quot;,1],&quot;1&quot;:[&quot;ACTION_MODS_KEY&quot;,&quot;LR_LEFT&quot;,[&quot;MOD_CTL&quot;,&quot;MOD_SFT&quot;],&quot;KC_ESCAPE&quot;],&quot;2&quot;:[&quot;ACTION_MODS_KEY&quot;,&quot;LR_LEFT&quot;,[&quot;MOD_CTL&quot;],&quot;KC_F4&quot;],&quot;3&quot;:[&quot;ACTION_KEY&quot;,&quot;KC_ENTER&quot;],&quot;4&quot;:[&quot;ACTION_MODS_KEY&quot;,&quot;LR_LEFT&quot;,[&quot;MOD_GUI&quot;],&quot;KC_R&quot;],&quot;5&quot;:[&quot;ACTION_MODS_KEY&quot;,&quot;LR_LEFT&quot;,[],&quot;KC_GRAVE&quot;],&quot;6&quot;:[&quot;ACTION_KEY&quot;,&quot;KC_BSPACE&quot;],&quot;7&quot;:[&quot;ACTION_MODS_KEY&quot;,&quot;LR_LEFT&quot;,[&quot;MOD_SFT&quot;],&quot;KC_MINUS&quot;],&quot;8&quot;:[&quot;ACTION_MODS_KEY&quot;,&quot;LR_LEFT&quot;,[&quot;MOD_CTL&quot;,&quot;MOD_GUI&quot;],&quot;KC_LEFT&quot;],&quot;9&quot;:[&quot;ACTION_MODS_KEY&quot;,&quot;LR_LEFT&quot;,[&quot;MOD_CTL&quot;,&quot;MOD_GUI&quot;],&quot;KC_RIGHT&quot;],&quot;10&quot;:[&quot;ACTION_BACKLIGHT_DECREASE&quot;],&quot;11&quot;:[&quot;ACTION_BACKLIGHT_TOGGLE&quot;],&quot;12&quot;:[&quot;ACTION_BACKLIGHT_INCREASE&quot;],&quot;13&quot;:[&quot;ACTION_MODS_KEY&quot;,&quot;LR_LEFT&quot;,[&quot;MOD_CTL&quot;],&quot;KC_LEFT&quot;],&quot;14&quot;:[&quot;ACTION_MODS_KEY&quot;,&quot;LR_LEFT&quot;,[&quot;MOD_CTL&quot;],&quot;KC_RIGHT&quot;],&quot;15&quot;:[&quot;ACTION_NO&quot;],&quot;16&quot;:[&quot;ACTION_NO&quot;],&quot;17&quot;:[&quot;ACTION_KEY&quot;,&quot;KC_INSERT&quot;],&quot;18&quot;:[&quot;ACTION_KEY&quot;,&quot;KC_EQUAL&quot;],&quot;19&quot;:[&quot;ACTION_KEY&quot;,&quot;KC_DELETE&quot;],&quot;20&quot;:[&quot;ACTION_NO&quot;],&quot;21&quot;:[&quot;ACTION_LAYER_TOGGLE&quot;,&quot;2&quot;]
+</code></pre></div>
+
+<h3 id="led">LED设置:<a class="headerlink" href="#led" title="Permanent link">&para;</a></h3>
+<p>无指示灯,全背光</p>
+<p><img alt="img" src="../../../assets/img/gh60/LED.png" /></p>
+<p>查看按键作用请使用对照查看:</p>
+<p><img alt="img" src="../../../assets/img/gh60/help_0.png" /></p>
+<h3 id="_9">工具:<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h3>
+<p><a href="http://www.keyboard-layout-editor.com/">http://www.keyboard-layout-editor.com</a> 配列设计</p>
+<p><a href="http://tkg.io/">http://tkg.io/</a> 烧写固件</p>
+<p>zadig 切换键盘驱动</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../2_gh60_Materials/" title="0x02 GH60的零件清单" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  上一页
+                </span>
+                0x02 GH60的零件清单
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../oven_%E5%BE%AE%E6%B3%A2%E7%82%89/1_oven_knowledge/" title="烤箱选购" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  下一页
+                </span>
+                烤箱选购
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../../assets/javascripts/vendor.d710d30a.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.b39636ac.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../../assets/javascripts/worker/search.a68abb33.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
