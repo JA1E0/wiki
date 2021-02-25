@@ -19,7 +19,7 @@
     
     
       
-        <title>工具快捷键</title>
+        <title>工具设置</title>
       
     
     
@@ -62,7 +62,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vim" class="md-skip">
+        <a href="#ssh" class="md-skip">
           跳转至
         </a>
       
@@ -90,7 +90,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              工具快捷键
+              工具设置
             
           </span>
         </div>
@@ -811,8 +811,8 @@
       
     
     
-    <a href="./" title="工具快捷键" class="md-nav__link md-nav__link--active">
-      工具快捷键
+    <a href="./" title="工具设置" class="md-nav__link md-nav__link--active">
+      工具设置
     </a>
     
   </li>
@@ -878,12 +878,11 @@
                   
                 
                 
-                <h1 id="vim">Vim<a class="headerlink" href="#vim" title="Permanent link">&para;</a></h1>
-<p>设置"vim.easymotion": true 开启这个模式。</p>
-<p>t/T <char> 能够向前/向后快速到达可见范围内的某字符(<char>)的位置。</p>
-<p>w/b 向前/向后到达可见范围内任何单词的开头。</p>
-<p>e/ge 向前/向后到达可见范围内任何单词的结尾。</p>
-<p>k/j 向前/向后到达可见范围内任何行的行首。</p>
+                <h1 id="ssh">给ssh挂代理<a class="headerlink" href="#ssh" title="Permanent link">&para;</a></h1>
+<p>C:\Users\user\.ssh\config 文件</p>
+<div class="highlight"><pre><span></span><code>Host *
+    ProxyCommand  C:\Program Files\Git\mingw64\bin\connect.exe -H 127.0.0.1:7890 %h %p 
+</code></pre></div>
                 
                   
                 
