@@ -1,0 +1,83 @@
+site_name: aWei's Wiki
+site_url: https://wiki.dgmddw.xyz
+site_author: aWei
+
+theme:
+  name: material
+  feature:
+    tabs: true
+  palette:
+    primary: 'Deep Purple'
+    accent: 'Deep Purple'
+  language: 'zh'
+extra:
+  search:
+    language: 'jp'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: false
+  - toc:
+      permalink: true
+  - footnotes
+  - meta
+  - def_list
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_png
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist
+  - pymdownx.tilde
+
+nav:
+  - 选购商品:
+    - GH60 客制化键盘:
+      - buy_someting\gh60\1_gh60_edition.md
+      - buy_someting\gh60\2_gh60_Materials.md
+      - buy_someting\gh60\3_gh60_install.md
+    - 烤箱:
+      - buy_someting\oven_微波炉\1_oven_knowledge.md
+      - buy_someting\oven_微波炉\2_oven_experience.md
+    - 厨刀:
+      - buy_someting\knife\knife.md
+    - 跑步:
+      - buy_someting\running\jogging_winter.md
+  - 计算机:
+    - windows编程:
+      - computer\windows_core_programming\Inject.md
+      - computer\windows_core_programming\multi_thread.md
+    - 信息安全:
+      - 逆向工程:
+        - 恶意软件:
+          - YARA:
+            - computer\security\RE\malware\YARA\creating_yara.md
+            - computer\security\RE\malware\YARA\yara_docs.md
+            - computer\security\RE\malware\YARA\Kaspersky_yara_note.md
+        - computer\security\RE\office_cve.md
+      - 威胁情报:
+        - computer\security\threat_intelligence\awesome-threat-intelligence.md
+        - OSINT: 
+          - computer\security\threat_intelligence\OSINT\bookmarks_menu.md
+          - computer\security\threat_intelligence\OSINT\OSINT_framework.md
+        - APT:
+          - computer\security\threat_intelligence\APT\APT&TTPs.md
+      - Web:
+          - computer\security\WEB\Practice_platform.md
+          - computer\security\WEB\Linux_Privilege_Escalation.md
+      - computer\security\hw_redteam.md
+  - 工具:
+    - Tool\keyboard_shortcuts.md
+    - Tool\Tools.md
+    - Tool\common_code.md
+ 
