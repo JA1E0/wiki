@@ -4,6 +4,7 @@ date: 2020-09-13
 ---
 
 ## 别人常用的断言宏
+
 http://betacat.github.io/2014/01/12/assert-defensive-offensive-programming/
 
 ```C++
