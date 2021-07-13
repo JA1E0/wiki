@@ -2,6 +2,25 @@
 title: 常用调试代码
 date: 2020-09-13
 ---
+
+## 别人常用的断言宏
+http://betacat.github.io/2014/01/12/assert-defensive-offensive-programming/
+
+```C++
+#ifdef DEBUG
+#define ASSERT(x) assert(x)
+#else
+#define ASSERT(x)
+#endif
+
+#define ASSERT_RETURN(x)            {ASSERT(x); if(!(x)) {return;}}
+#define ASSERT_RETURN_VAL(x, ret)   {ASSERT(x); if(!(x)) {return ret;}}
+#define ASSERT_GOTO(x, label)       {ASSERT(x); if(!(x)) {goto label;}}
+#define ASSERT_BREAK(x)             {ASSERT(x); if(!(x)) {break;}}
+#define ASSERT_CONTINUE(x)          {ASSERT(x); if(!(x)) {continue;}}
+```
+
+
 ## powershell策略改变
 管理员权限
 set-executionpolicy remotesigned
