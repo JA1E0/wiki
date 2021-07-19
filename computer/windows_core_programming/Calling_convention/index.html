@@ -18,7 +18,7 @@
     
     
       
-        <title>调用约定，栈帧 - aWei's Wiki</title>
+        <title>调用约定 - aWei's Wiki</title>
       
     
     
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              调用约定，栈帧
+              调用约定
             
           </span>
         </div>
@@ -399,12 +399,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         计算机
@@ -420,12 +422,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
       
       <label class="md-nav__link" for="__nav_2_1">
         windows编程
@@ -437,6 +441,88 @@
           windows编程
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          调用约定
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        调用约定
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#x86" class="md-nav__link">
+    x86
+  </a>
+  
+    <nav class="md-nav" aria-label="x86">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#stdcall" class="md-nav__link">
+    stdcall
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cdcel" class="md-nav__link">
+    cdcel
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fastcall" class="md-nav__link">
+    fastcall
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#x64" class="md-nav__link">
+    x64
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
           
             
   
@@ -965,7 +1051,7 @@
               
                 
                 
-                  <h1>调用约定，栈帧</h1>
+                  <h1>调用约定</h1>
                 
                 <h2 id="x86">x86<a class="headerlink" href="#x86" title="Permanent link">&para;</a></h2>
 <p><a href="https://bbs.pediy.com/thread-224583.htm">https://bbs.pediy.com/thread-224583.htm</a></p>
@@ -973,14 +1059,13 @@
 <h3 id="cdcel">cdcel<a class="headerlink" href="#cdcel" title="Permanent link">&para;</a></h3>
 <h3 id="fastcall">fastcall<a class="headerlink" href="#fastcall" title="Permanent link">&para;</a></h3>
 <h2 id="x64">x64<a class="headerlink" href="#x64" title="Permanent link">&para;</a></h2>
-<p>易变寄存器 rcx,rdx,r8,r9,r10,r11</p>
 <p>x64 只有一种调用约定<code>FastCall</code>。</p>
-<p>前四个参数，依次使用rcx，rdx，r8，r9寄存器进行传参。剩下的参数从右往左依次入栈，被调用者实现栈平衡，返回值存放在 RAX 中。</p>
+<p><strong>前四个参数，依次使用rcx，rdx，r8，r9寄存器进行传参。剩下的参数从右往左依次入栈，被调用者实现栈平衡，返回值存放在 RAX 中。</strong></p>
 <p>但是编译器不会使用push将参数进行压栈，而是一次性使用<code>sub rsp，N</code>，开辟整个程序的栈，包括被调用者和局部变量的。然后使用<code>mov qword ptr[rsp+N],X</code>进行栈的参数传递。最后再使用<code>add rsp,N</code>恢复。</p>
-<p>在执行Call前，栈是0x10对齐（编译器所约定的，即使对齐0x8也能执行）。针对不定参数的函数，至少会开辟4*8的栈空间。如果要使用非易变寄存器则要使用push进行保存，使用后pop返回原值。</p>
+<p>在执行Call前，栈是0x10对齐（编译器所约定的，即使对齐0x8也能执行）。针对不定参数的函数，至少会开辟4*8的栈空间。如果要使用非易变寄存器则要使用push进行保存，使用后pop返回原值。（易变寄存器 rcx,rdx,r8,r9,r10,r11。）</p>
 <p>被调用者func内，会使用mov指令，将寄存器的值复制到栈空间中进行调用。
 <img alt="" src="../../../assets/img/windows_program/Call_conversion_p1.png" /></p>
-<p>不定值参数函数，最少也要分配0x20字节的栈。例printf,system;</p>
+<p><strong>不定值参数函数，最少也要分配0x20字节的栈。例printf,system;</strong></p>
 <p>示例如下：开启/RTCS，和全程序优化/GL 
 <div class="highlight"><pre><span></span><code><span class="c1">// main.cpp</span>
 <span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
@@ -1069,6 +1154,41 @@ $ + 48
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../../buy_someting/running/jogging_winter/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 秋冬夜跑" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              秋冬夜跑
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../Inject/" class="md-footer__link md-footer__link--next" aria-label="下一页: 各种注入提示" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              各种注入提示
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
