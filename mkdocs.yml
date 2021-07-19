@@ -55,6 +55,7 @@ nav:
       - buy_someting\running\jogging_winter.md
   - 计算机:
     - windows编程:
+      - computer\windows_core_programming\Calling_convention.md
       - computer\windows_core_programming\Inject.md
       - computer\windows_core_programming\multi_thread.md
     - 信息安全:
