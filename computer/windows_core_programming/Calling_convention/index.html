@@ -11,14 +11,14 @@
         <meta name="author" content="aWei">
       
       
-        <link rel="canonical" href="https://wiki.dgmddw.xyz/computer/security/hw_redteam/">
+        <link rel="canonical" href="https://wiki.dgmddw.xyz/computer/windows_core_programming/Calling_convention/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.1.11">
     
     
       
-        <title>分析tips-redteam使用工具 - aWei's Wiki</title>
+        <title>调用约定，栈帧 - aWei's Wiki</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tips" class="md-skip">
+        <a href="#x86" class="md-skip">
           跳转至
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              分析tips-redteam使用工具
+              调用约定，栈帧
             
           </span>
         </div>
@@ -399,14 +399,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
       
       <label class="md-nav__link" for="__nav_2">
         计算机
@@ -445,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows_core_programming/Inject/" class="md-nav__link">
+      <a href="../Inject/" class="md-nav__link">
         各种注入提示
       </a>
     </li>
@@ -457,7 +455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows_core_programming/multi_thread/" class="md-nav__link">
+      <a href="../multi_thread/" class="md-nav__link">
         多线程有关
       </a>
     </li>
@@ -473,14 +471,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
       
       <label class="md-nav__link" for="__nav_2_2">
         信息安全
@@ -561,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RE/malware/YARA/creating_yara/" class="md-nav__link">
+      <a href="../../security/RE/malware/YARA/creating_yara/" class="md-nav__link">
         编写Yara规则检测恶意软件
       </a>
     </li>
@@ -573,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RE/malware/YARA/yara_docs/" class="md-nav__link">
+      <a href="../../security/RE/malware/YARA/yara_docs/" class="md-nav__link">
         官方文档与signature
       </a>
     </li>
@@ -585,7 +581,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RE/malware/YARA/Kaspersky_yara_note/" class="md-nav__link">
+      <a href="../../security/RE/malware/YARA/Kaspersky_yara_note/" class="md-nav__link">
         卡巴斯基yara笔记
       </a>
     </li>
@@ -609,7 +605,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../RE/office_cve/" class="md-nav__link">
+      <a href="../../security/RE/office_cve/" class="md-nav__link">
         Office常见CVE
       </a>
     </li>
@@ -648,7 +644,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../threat_intelligence/awesome-threat-intelligence/" class="md-nav__link">
+      <a href="../../security/threat_intelligence/awesome-threat-intelligence/" class="md-nav__link">
         威胁情报大合集
       </a>
     </li>
@@ -681,7 +677,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../threat_intelligence/OSINT/bookmarks_menu/" class="md-nav__link">
+      <a href="../../security/threat_intelligence/OSINT/bookmarks_menu/" class="md-nav__link">
         OSINT 书签
       </a>
     </li>
@@ -693,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../threat_intelligence/OSINT/OSINT_framework/" class="md-nav__link">
+      <a href="../../security/threat_intelligence/OSINT/OSINT_framework/" class="md-nav__link">
         OSINT 框架
       </a>
     </li>
@@ -732,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../threat_intelligence/APT/APT%26TTPs/" class="md-nav__link">
+      <a href="../../security/threat_intelligence/APT/APT%26TTPs/" class="md-nav__link">
         APT 分析及 TTPs 提取
       </a>
     </li>
@@ -777,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../WEB/Practice_platform/" class="md-nav__link">
+      <a href="../../security/WEB/Practice_platform/" class="md-nav__link">
         Web练习平台
       </a>
     </li>
@@ -789,7 +785,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../WEB/Linux_Privilege_Escalation/" class="md-nav__link">
+      <a href="../../security/WEB/Linux_Privilege_Escalation/" class="md-nav__link">
         linux特权提升
       </a>
     </li>
@@ -805,94 +801,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          分析tips-redteam使用工具
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../security/hw_redteam/" class="md-nav__link">
         分析tips-redteam使用工具
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    分析tips
-  </a>
-  
-    <nav class="md-nav" aria-label="分析tips">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#golangida" class="md-nav__link">
-    golang恢复ida符号
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#shellcode0x90" class="md-nav__link">
-    shellcode开头是多个0x90
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#cldcall" class="md-nav__link">
-    开头cld接一个call
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    红队使用工具
-  </a>
-  
-    <nav class="md-nav" aria-label="红队使用工具">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#darkgld" class="md-nav__link">
-    DarkGld
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -999,30 +912,30 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#tips" class="md-nav__link">
-    分析tips
+  <a href="#x86" class="md-nav__link">
+    x86
   </a>
   
-    <nav class="md-nav" aria-label="分析tips">
+    <nav class="md-nav" aria-label="x86">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#golangida" class="md-nav__link">
-    golang恢复ida符号
+  <a href="#stdcall" class="md-nav__link">
+    stdcall
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#shellcode0x90" class="md-nav__link">
-    shellcode开头是多个0x90
+  <a href="#cdcel" class="md-nav__link">
+    cdcel
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#cldcall" class="md-nav__link">
-    开头cld接一个call
+  <a href="#fastcall" class="md-nav__link">
+    fastcall
   </a>
   
 </li>
@@ -1033,22 +946,9 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    红队使用工具
+  <a href="#x64" class="md-nav__link">
+    x64
   </a>
-  
-    <nav class="md-nav" aria-label="红队使用工具">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#darkgld" class="md-nav__link">
-    DarkGld
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -1065,26 +965,93 @@
               
                 
                 
-                  <h1>分析tips-redteam使用工具</h1>
+                  <h1>调用约定，栈帧</h1>
                 
-                <h2 id="tips">分析tips<a class="headerlink" href="#tips" title="Permanent link">&para;</a></h2>
-<h3 id="golangida">golang恢复ida符号<a class="headerlink" href="#golangida" title="Permanent link">&para;</a></h3>
-<p>python2 <a href="https://github.com/0xjiayu/go_parser">https://github.com/0xjiayu/go_parser</a></p>
-<p>python3 <a href="https://github.com/0xjiayu/go_parser/tree/py3">https://github.com/0xjiayu/go_parser/tree/py3</a></p>
-<h3 id="shellcode0x90">shellcode开头是多个0x90<a class="headerlink" href="#shellcode0x90" title="Permanent link">&para;</a></h3>
-<ul>
-<li>beacon 提取ip</li>
-<li>f8运行 进入第二个call reg</li>
-<li>进入第一个call</li>
-<li>进入ret 前倒数第二个call</li>
-</ul>
-<h3 id="cldcall">开头cld接一个call<a class="headerlink" href="#cldcall" title="Permanent link">&para;</a></h3>
-<p>暂时还没总结</p>
-<p><img alt src="../../../assets/img/security/CS_beacon1.png" width=60%/></p>
-<h2 id="_1">红队使用工具<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="darkgld">DarkGld<a class="headerlink" href="#darkgld" title="Permanent link">&para;</a></h3>
-<p>golang打包office文件和shellcode</p>
-<p><a href="https://github.com/darkb1rd/DarkGld/">https://github.com/darkb1rd/DarkGld/</a></p>
+                <h2 id="x86">x86<a class="headerlink" href="#x86" title="Permanent link">&para;</a></h2>
+<p><a href="https://bbs.pediy.com/thread-224583.htm">https://bbs.pediy.com/thread-224583.htm</a></p>
+<h3 id="stdcall">stdcall<a class="headerlink" href="#stdcall" title="Permanent link">&para;</a></h3>
+<h3 id="cdcel">cdcel<a class="headerlink" href="#cdcel" title="Permanent link">&para;</a></h3>
+<h3 id="fastcall">fastcall<a class="headerlink" href="#fastcall" title="Permanent link">&para;</a></h3>
+<h2 id="x64">x64<a class="headerlink" href="#x64" title="Permanent link">&para;</a></h2>
+<p>易变寄存器 rcx,rdx,r8,r9,r10,r11</p>
+<p>x64 只有一种调用约定<code>FastCall</code>。</p>
+<p>前四个参数，依次使用rcx，rdx，r8，r9寄存器进行传参。剩下的参数从右往左依次入栈，被调用者实现栈平衡，返回值存放在 RAX 中。</p>
+<p>但是编译器不会使用push将参数进行压栈，而是一次性使用<code>sub rsp，N</code>，开辟整个程序的栈，包括被调用者和局部变量的。然后使用<code>mov qword ptr[rsp+N],X</code>进行栈的参数传递。最后再使用<code>add rsp,N</code>恢复。</p>
+<p>在执行Call前，栈是0x10对齐（编译器所约定的，即使对齐0x8也能执行）。针对不定参数的函数，至少会开辟4*8的栈空间。如果要使用非易变寄存器则要使用push进行保存，使用后pop返回原值。</p>
+<p>被调用者func内，会使用mov指令，将寄存器的值复制到栈空间中进行调用。
+<img alt="" src="../../../assets/img/windows_program/Call_conversion_p1.png" /></p>
+<p>不定值参数函数，最少也要分配0x20字节的栈。例printf,system;</p>
+<p>示例如下：开启/RTCS，和全程序优化/GL 
+<div class="highlight"><pre><span></span><code><span class="c1">// main.cpp</span>
+<span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="cpf">&lt;Windows.h&gt;</span><span class="cp"></span>
+<span class="k">extern</span> <span class="s">&quot;C&quot;</span><span class="p">{</span>
+    <span class="kt">void</span> <span class="nf">asm_func</span><span class="p">();</span>
+    <span class="kt">void</span> <span class="nf">func</span><span class="p">(</span><span class="n">ULONG</span> <span class="n">a1</span><span class="p">,</span>  <span class="n">ULONG</span> <span class="n">a2</span><span class="p">,</span> <span class="n">ULONG</span> <span class="n">a3</span><span class="p">,</span> <span class="n">ULONG</span> <span class="n">a4</span><span class="p">,</span><span class="n">ULONG</span> <span class="n">a5</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a1</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a2</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a3</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a4</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">int</span> <span class="n">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span><span class="kt">char</span><span class="o">**</span> <span class="n">argv</span><span class="p">)</span> <span class="p">{</span>
+    <span class="n">asm_func</span><span class="p">();</span>
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div></p>
+<div class="highlight"><pre><span></span><code><span class="c1">// x64asm.asm</span>
+<span class="p">;</span><span class="err">大小写敏感</span>
+<span class="n">option</span> <span class="nl">casemap</span><span class="p">:</span><span class="n">none</span>
+
+<span class="p">;</span><span class="n">main</span> <span class="n">Proto</span>
+
+<span class="n">func</span> <span class="n">Proto</span>
+<span class="n">printf</span> <span class="n">Proto</span>
+<span class="p">.</span><span class="n">data</span>
+<span class="p">;</span><span class="n">ttt</span> <span class="n">qword</span> <span class="o">?</span>
+<span class="n">pStr</span> <span class="n">DB</span> <span class="err">&#39;</span><span class="n">this</span> <span class="n">is</span> <span class="n">in</span> <span class="n">asm_func</span><span class="err">&#39;</span><span class="p">,</span><span class="mi">0</span><span class="n">Ah</span><span class="p">,</span><span class="mo">00</span><span class="n">h</span>
+<span class="p">.</span><span class="n">code</span>
+
+<span class="n">asm_func</span> <span class="n">Proc</span>
+    <span class="n">push</span> <span class="n">rdi</span>
+    <span class="n">sub</span> <span class="n">rsp</span><span class="p">,</span><span class="mi">30</span><span class="n">h</span>
+    <span class="n">lea</span> <span class="n">rcx</span><span class="p">,[</span><span class="n">pStr</span><span class="p">]</span>
+    <span class="n">call</span> <span class="n">printf</span> 
+    <span class="p">;</span><span class="n">add</span> <span class="n">rsp</span><span class="p">,</span><span class="mi">20</span><span class="n">h</span>
+
+    <span class="n">mov</span> <span class="n">rdi</span><span class="p">,</span><span class="mi">1</span>
+    <span class="n">mov</span> <span class="n">rcx</span><span class="p">,</span><span class="n">rdi</span>
+    <span class="n">mov</span> <span class="n">rcx</span><span class="p">,</span><span class="mi">1</span>
+    <span class="n">mov</span> <span class="n">rdx</span><span class="p">,</span><span class="mi">2</span>
+    <span class="n">mov</span> <span class="n">r8</span><span class="p">,</span><span class="mi">3</span>
+    <span class="n">mov</span> <span class="n">r9</span><span class="p">,</span><span class="mi">4</span>
+
+    <span class="p">;</span><span class="n">sub</span> <span class="n">rsp</span><span class="p">,</span><span class="mi">28</span><span class="n">h</span>
+    <span class="n">mov</span> <span class="n">qword</span> <span class="n">ptr</span> <span class="p">[</span><span class="n">rsp</span><span class="o">+</span><span class="mi">20</span><span class="n">h</span><span class="p">],</span><span class="mi">5</span>
+
+    <span class="n">call</span> <span class="n">func</span>
+    <span class="p">;</span><span class="n">add</span> <span class="n">rsp</span><span class="p">,</span><span class="mi">28</span><span class="n">h</span>
+    <span class="n">lea</span> <span class="n">rsp</span><span class="p">,</span><span class="n">qword</span> <span class="n">ptr</span> <span class="p">[</span><span class="n">rsp</span><span class="o">+</span><span class="mi">30</span><span class="n">h</span><span class="p">]</span>
+    <span class="n">pop</span> <span class="n">rdi</span>
+    <span class="n">ret</span>
+<span class="n">asm_func</span> <span class="n">Endp</span>
+
+<span class="n">END</span>
+</code></pre></div>
+<p>断点在call func的栈帧分析如下：
+<div class="highlight"><pre><span></span><code>$ r ==&gt;   arg1      ;a1
+$ + 8     arg2      ;a2
+$ + 10    arg3      ;a3
+$ + 18    arg4      ;a4
+$ + 20    a5 
+$ + 28    padding
+$ + 30    r
+$ + 38    rdi
+$ + 40    
+$ + 48    
+</code></pre></div></p>
                 
                   
                 
@@ -1102,41 +1069,6 @@
       
         
 <footer class="md-footer">
-  
-    <nav class="md-footer__inner md-grid" aria-label="Footer">
-      
-        
-        <a href="../WEB/Linux_Privilege_Escalation/" class="md-footer__link md-footer__link--prev" aria-label="上一页: linux特权提升" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                上一页
-              </span>
-              linux特权提升
-            </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../../../Tool/keyboard_shortcuts/" class="md-footer__link md-footer__link--next" aria-label="下一页: 工具设置" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                下一页
-              </span>
-              工具设置
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
