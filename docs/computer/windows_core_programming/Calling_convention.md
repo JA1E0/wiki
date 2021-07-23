@@ -3,6 +3,9 @@
     date: 2021-06-09
 ---
 
+
+x64汇编的指针访问，是有符号的32位，上下2个G访问。
+
 ## x86
 
 https://bbs.pediy.com/thread-224583.htm
