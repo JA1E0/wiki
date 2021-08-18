@@ -59,13 +59,12 @@ nav:
       - computer\windows_core_programming\Inject.md
       - computer\windows_core_programming\multi_thread.md
     - 信息安全:
-      - 逆向工程:
-        - 恶意软件:
-          - YARA:
-            - computer\security\RE\malware\YARA\creating_yara.md
-            - computer\security\RE\malware\YARA\yara_docs.md
-            - computer\security\RE\malware\YARA\Kaspersky_yara_note.md
-        - computer\security\RE\office_cve.md
+      - 病毒分析:
+        - YARA:
+          - computer\security\malware\YARA\creating_yara.md
+          - computer\security\malware\YARA\yara_docs.md
+          - computer\security\malware\YARA\Kaspersky_yara_note.md
+        - computer\security\office_cve.md
       - 威胁情报:
         - computer\security\threat_intelligence\awesome-threat-intelligence.md
         - OSINT: 
@@ -81,4 +80,5 @@ nav:
     - Tool\keyboard_shortcuts.md
     - Tool\Tools.md
     - Tool\common_code.md
+    - Tool\vscode_shortcuts.md
  
