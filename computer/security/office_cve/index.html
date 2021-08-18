@@ -11,14 +11,14 @@
         <meta name="author" content="aWei">
       
       
-        <link rel="canonical" href="https://wiki.noobwei.top/computer/windows_core_programming/multi_thread/">
+        <link rel="canonical" href="https://wiki.noobwei.top/computer/security/office_cve/">
       
       <link rel="icon" href="../../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
     
     
       
-        <title>多线程有关 - aWei's Wiki</title>
+        <title>Office常见CVE - aWei's Wiki</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_beginthreadex" class="md-skip">
+        <a href="#cve-2017-11882" class="md-skip">
           跳转至
         </a>
       
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              多线程有关
+              Office常见CVE
             
           </span>
         </div>
@@ -426,14 +426,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_1" type="checkbox" id="__nav_2_1" >
       
       <label class="md-nav__link" for="__nav_2_1">
         windows编程
@@ -451,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Calling_convention/" class="md-nav__link">
+      <a href="../../windows_core_programming/Calling_convention/" class="md-nav__link">
         调用约定
       </a>
     </li>
@@ -463,7 +461,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../Inject/" class="md-nav__link">
+      <a href="../../windows_core_programming/Inject/" class="md-nav__link">
         各种注入提示
       </a>
     </li>
@@ -473,47 +471,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          多线程有关
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../windows_core_programming/multi_thread/" class="md-nav__link">
         多线程有关
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_beginthreadex" class="md-nav__link">
-    使用 _beginthreadex
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -527,12 +489,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2" type="checkbox" id="__nav_2_2" checked>
       
       <label class="md-nav__link" for="__nav_2_2">
         信息安全
@@ -548,12 +512,14 @@
             
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_1" type="checkbox" id="__nav_2_2_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2_2_1" type="checkbox" id="__nav_2_2_1" checked>
       
       <label class="md-nav__link" for="__nav_2_2_1">
         病毒分析
@@ -592,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/malware/YARA/creating_yara/" class="md-nav__link">
+      <a href="../malware/YARA/creating_yara/" class="md-nav__link">
         编写Yara规则检测恶意软件
       </a>
     </li>
@@ -604,7 +570,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/malware/YARA/yara_docs/" class="md-nav__link">
+      <a href="../malware/YARA/yara_docs/" class="md-nav__link">
         官方文档与signature
       </a>
     </li>
@@ -616,7 +582,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/malware/YARA/Kaspersky_yara_note/" class="md-nav__link">
+      <a href="../malware/YARA/Kaspersky_yara_note/" class="md-nav__link">
         卡巴斯基yara笔记
       </a>
     </li>
@@ -632,11 +598,61 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../security/office_cve/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Office常见CVE
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Office常见CVE
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cve-2017-11882" class="md-nav__link">
+    CVE-2017-11882
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cve-2018-0798" class="md-nav__link">
+    CVE-2018-0798
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cve-2017-0199" class="md-nav__link">
+    CVE-2017-0199
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -673,7 +689,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/threat_intelligence/awesome-threat-intelligence/" class="md-nav__link">
+      <a href="../threat_intelligence/awesome-threat-intelligence/" class="md-nav__link">
         威胁情报大合集
       </a>
     </li>
@@ -706,7 +722,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/threat_intelligence/OSINT/bookmarks_menu/" class="md-nav__link">
+      <a href="../threat_intelligence/OSINT/bookmarks_menu/" class="md-nav__link">
         OSINT 书签
       </a>
     </li>
@@ -718,7 +734,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/threat_intelligence/OSINT/OSINT_framework/" class="md-nav__link">
+      <a href="../threat_intelligence/OSINT/OSINT_framework/" class="md-nav__link">
         OSINT 框架
       </a>
     </li>
@@ -757,7 +773,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/threat_intelligence/APT/APT%26TTPs/" class="md-nav__link">
+      <a href="../threat_intelligence/APT/APT%26TTPs/" class="md-nav__link">
         APT 分析及 TTPs 提取
       </a>
     </li>
@@ -802,7 +818,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/WEB/Practice_platform/" class="md-nav__link">
+      <a href="../WEB/Practice_platform/" class="md-nav__link">
         Web练习平台
       </a>
     </li>
@@ -814,7 +830,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/WEB/Linux_Privilege_Escalation/" class="md-nav__link">
+      <a href="../WEB/Linux_Privilege_Escalation/" class="md-nav__link">
         linux特权提升
       </a>
     </li>
@@ -832,7 +848,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/hw_redteam/" class="md-nav__link">
+      <a href="../hw_redteam/" class="md-nav__link">
         分析tips-redteam使用工具
       </a>
     </li>
@@ -953,8 +969,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_beginthreadex" class="md-nav__link">
-    使用 _beginthreadex
+  <a href="#cve-2017-11882" class="md-nav__link">
+    CVE-2017-11882
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cve-2018-0798" class="md-nav__link">
+    CVE-2018-0798
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cve-2017-0199" class="md-nav__link">
+    CVE-2017-0199
   </a>
   
 </li>
@@ -972,29 +1002,18 @@
               
                 
                 
-                  <h1>多线程有关</h1>
+                  <h1>Office常见CVE</h1>
                 
-                <h2 id="_beginthreadex">使用 _beginthreadex<a class="headerlink" href="#_beginthreadex" title="Permanent link">&para;</a></h2>
-<p>不可在DLLmain中使用WaitForSingleObject等等待线程函数</p>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="cpf">&lt;windows.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="cpf">&lt;process.h&gt;</span><span class="cp"></span>
-
-<span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="kr">__stdcall</span><span class="w"> </span><span class="n">ThreadProc</span><span class="p">(</span><span class="n">PVOID</span><span class="w"> </span><span class="n">pParam</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">MessageBoxA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;thread&quot;</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">MB_OK</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">_endthreadex</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-
-<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-
-<span class="w">    </span><span class="n">HANDLE</span><span class="w"> </span><span class="n">hThread</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">HANDLE</span><span class="p">)</span><span class="n">_beginthreadex</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">ThreadProc</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hThread</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">WaitForSingleObject</span><span class="p">(</span><span class="n">hThread</span><span class="p">,</span><span class="w"> </span><span class="n">INFINITE</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">CloseHandle</span><span class="p">(</span><span class="n">hThread</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-</code></pre></div>
+                <h2 id="cve-2017-11882">CVE-2017-11882<a class="headerlink" href="#cve-2017-11882" title="Permanent link">&para;</a></h2>
+<p>EXE: EQNEDT32.EXE
+Address: 0x41160F</p>
+<h2 id="cve-2018-0798">CVE-2018-0798<a class="headerlink" href="#cve-2018-0798" title="Permanent link">&para;</a></h2>
+<p>office2007不用打补丁
+EXE: EQNEDT32.EXE
+Address: 0x443E34 </p>
+<h2 id="cve-2017-0199">CVE-2017-0199<a class="headerlink" href="#cve-2017-0199" title="Permanent link">&para;</a></h2>
+<p>通过oletools能进行扫描
+手动分析对文件进行解包,.\word\_rels\*.rels进行链接排查</p>
                 
                   
                 
@@ -1016,7 +1035,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../Inject/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 各种注入提示" rel="prev">
+        <a href="../malware/YARA/Kaspersky_yara_note/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 卡巴斯基yara笔记" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1025,20 +1044,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              各种注入提示
+              卡巴斯基yara笔记
             </div>
           </div>
         </a>
       
       
         
-        <a href="../../security/malware/YARA/creating_yara/" class="md-footer__link md-footer__link--next" aria-label="下一页: 编写Yara规则检测恶意软件" rel="next">
+        <a href="../threat_intelligence/awesome-threat-intelligence/" class="md-footer__link md-footer__link--next" aria-label="下一页: 威胁情报大合集" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              编写Yara规则检测恶意软件
+              威胁情报大合集
             </div>
           </div>
           <div class="md-footer__button md-icon">
