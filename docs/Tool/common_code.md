@@ -94,3 +94,12 @@ namespace ConsoleApp3
 
 ## 递归下载网页文件
 wget -c -r -p -k -np url
+
+## 计算imphash
+
+```python
+import pefile
+pe = pefile.PE("YourFile.exe")
+pe.get_imphash()
+```
+
