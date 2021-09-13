@@ -7,6 +7,7 @@ theme:
   features:
     - navigation.tabs
     - header.autohide
+    - navigation.expand
   palette:
     primary: 'Deep Purple'
     accent: 'Deep Purple'
