@@ -4,8 +4,9 @@ site_author: aWei
 
 theme:
   name: material
-  feature:
-    tabs: true
+  features:
+    - navigation.tabs
+    - header.autohide
   palette:
     primary: 'Deep Purple'
     accent: 'Deep Purple'
