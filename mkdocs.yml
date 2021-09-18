@@ -56,28 +56,26 @@ nav:
     - 跑步:
       - buy_someting\running\jogging_winter.md
   - 计算机:
+    - windows内核编程:
+      - computer\windows_kernel_programming\index.md
     - windows编程:
       - computer\windows_core_programming\Calling_convention.md
       - computer\windows_core_programming\Inject.md
       - computer\windows_core_programming\multi_thread.md
-    - 信息安全:
-      - 病毒分析:
-        - YARA:
-          - computer\security\malware\YARA\creating_yara.md
-          - computer\security\malware\YARA\yara_docs.md
-          - computer\security\malware\YARA\Kaspersky_yara_note.md
-        - computer\security\office_cve.md
-      - 威胁情报:
-        - computer\security\threat_intelligence\awesome-threat-intelligence.md
-        - OSINT: 
-          - computer\security\threat_intelligence\OSINT\bookmarks_menu.md
-          - computer\security\threat_intelligence\OSINT\OSINT_framework.md
-        - APT:
-          - computer\security\threat_intelligence\APT\APT&TTPs.md
-      - Web:
-          - computer\security\WEB\Practice_platform.md
-          - computer\security\WEB\Linux_Privilege_Escalation.md
-      - computer\security\hw_redteam.md
+    - 病毒分析:
+      - YARA:
+        - computer\security\malware\YARA\creating_yara.md
+        - computer\security\malware\YARA\yara_docs.md
+        - computer\security\malware\YARA\Kaspersky_yara_note.md
+      - computer\security\office_cve.md
+    - 威胁情报:
+      - computer\security\threat_intelligence\awesome-threat-intelligence.md
+      - computer\security\threat_intelligence\OSINT\bookmarks_menu.md
+      - computer\security\threat_intelligence\OSINT\OSINT_framework.md
+    - Web:
+        - computer\security\WEB\Practice_platform.md
+        - computer\security\WEB\Linux_Privilege_Escalation.md
+    - computer\security\hw_redteam.md
   - 工具:
     - Tool\keyboard_shortcuts.md
     - Tool\Tools.md
