@@ -9,6 +9,9 @@ date: 2021-09-18
 #### MSR寄存器 32位进64位 
 > http://blog.noobwei.top/2021/07/27/2021-07-27-IA32e%E6%A8%A1%E5%BC%8F%E7%AC%94%E8%AE%B0/
 
+#### SSDT
+> https://blog.noobwei.top/2021/10/02/2021-10-02-SSDTHOOK/
+
 #### 分页 内核页表隔离 
 x64 `9 9 9 9 12` 
 
