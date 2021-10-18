@@ -14,7 +14,7 @@
         <link rel="canonical" href="https://wiki.noobwei.top/computer/windows_kernel_programming/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.3.1">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.4">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.1c75ef36.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.db9e7362.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.3f5d1f46.min.css">
@@ -198,7 +198,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="msdn/" class="md-tabs__link md-tabs__link--active">
         计算机
       </a>
     </li>
@@ -593,6 +593,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="msdn/" class="md-nav__link">
+        官方文档快速查询
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -625,6 +639,13 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    笔记总体索引
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     常用内核函数查询
   </a>
   
@@ -645,7 +666,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#windows" class="md-nav__link">
+    Windows系统调用解析
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    内核通知与内核回调
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     分页 内核页表隔离
   </a>
   
@@ -659,15 +694,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows系统调用解析
+  <a href="#tdi" class="md-nav__link">
+    TDI网络过滤驱动
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    笔记总体索引
+  <a href="#_5" class="md-nav__link">
+    枚举注册表和进程回调
   </a>
   
 </li>
@@ -676,6 +711,20 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="template/" class="md-nav__link">
+        内核基础模板
+      </a>
     </li>
   
 
@@ -1185,6 +1234,13 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
+    笔记总体索引
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
     常用内核函数查询
   </a>
   
@@ -1205,7 +1261,21 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#windows" class="md-nav__link">
+    Windows系统调用解析
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    内核通知与内核回调
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     分页 内核页表隔离
   </a>
   
@@ -1219,15 +1289,15 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows系统调用解析
+  <a href="#tdi" class="md-nav__link">
+    TDI网络过滤驱动
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    笔记总体索引
+  <a href="#_5" class="md-nav__link">
+    枚举注册表和进程回调
   </a>
   
 </li>
@@ -1247,7 +1317,11 @@
                 
                   <h1>内核笔记快速查询</h1>
                 
-                <h4 id="_1">常用内核函数查询<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+                <h4 id="_1">笔记总体索引<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><a href="http://blog.noobwei.top/categories/windows%E5%86%85%E6%A0%B8/">http://blog.noobwei.top/categories/windows%E5%86%85%E6%A0%B8/</a></p>
+</blockquote>
+<h4 id="_2">常用内核函数查询<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <blockquote>
 <p><a href="http://blog.noobwei.top/2021/09/03/2021-09-03-%E9%A9%B1%E5%8A%A8%E5%9F%BA%E7%A1%80/">http://blog.noobwei.top/2021/09/03/2021-09-03-%E9%A9%B1%E5%8A%A8%E5%9F%BA%E7%A1%80/</a></p>
 </blockquote>
@@ -1259,7 +1333,16 @@
 <blockquote>
 <p><a href="https://blog.noobwei.top/2021/10/02/2021-10-02-SSDTHOOK/">https://blog.noobwei.top/2021/10/02/2021-10-02-SSDTHOOK/</a></p>
 </blockquote>
-<h4 id="_2">分页 内核页表隔离<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h4 id="windows">Windows系统调用解析<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
+<p><code>int 2e</code>，<code>sysenter</code>，<code>syscall</code>，<code>sysret</code></p>
+<blockquote>
+<p><a href="http://blog.noobwei.top/2021/09/08/2021-09-08-Windows%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8/">http://blog.noobwei.top/2021/09/08/2021-09-08-Windows%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8/</a></p>
+</blockquote>
+<h4 id="_3">内核通知与内核回调<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<blockquote>
+<p><a href="http://blog.noobwei.top/2021/09/10/2021-09-10-%E5%86%85%E6%A0%B8%E9%80%9A%E7%9F%A5%E4%B8%8E%E8%BF%9B%E7%A8%8B%E5%9B%9E%E8%B0%83%E4%BE%8B%E7%A8%8B/">http://blog.noobwei.top/2021/09/10/2021-09-10-%E5%86%85%E6%A0%B8%E9%80%9A%E7%9F%A5%E4%B8%8E%E8%BF%9B%E7%A8%8B%E5%9B%9E%E8%B0%83%E4%BE%8B%E7%A8%8B/</a></p>
+</blockquote>
+<h4 id="_4">分页 内核页表隔离<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h4>
 <p>x64 <code>9 9 9 9 12</code> </p>
 <p>x32 <code>2 9 9 12</code></p>
 <blockquote>
@@ -1269,14 +1352,13 @@
 <blockquote>
 <p><a href="http://blog.noobwei.top/2021/07/25/2021-07-25-%E5%A6%82%E4%BD%95%E5%88%86%E6%9E%90x64_SEH/">http://blog.noobwei.top/2021/07/25/2021-07-25-%E5%A6%82%E4%BD%95%E5%88%86%E6%9E%90x64_SEH/</a></p>
 </blockquote>
-<h4 id="windows">Windows系统调用解析<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h4>
-<p><code>int 2e</code>，<code>sysenter</code>，<code>syscall</code>，<code>sysret</code></p>
+<h4 id="tdi">TDI网络过滤驱动<a class="headerlink" href="#tdi" title="Permanent link">&para;</a></h4>
 <blockquote>
-<p><a href="http://blog.noobwei.top/2021/09/08/2021-09-08-Windows%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8/">http://blog.noobwei.top/2021/09/08/2021-09-08-Windows%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8/</a></p>
+<p><a href="http://blog.noobwei.top/2021/09/15/2021-09-15-TDI%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E8%BF%87%E6%BB%A4/">http://blog.noobwei.top/2021/09/15/2021-09-15-TDI%E7%BD%91%E7%BB%9C%E9%A9%B1%E5%8A%A8%E8%BF%87%E6%BB%A4/</a></p>
 </blockquote>
-<h4 id="_3">笔记总体索引<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h4 id="_5">枚举注册表和进程回调<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h4>
 <blockquote>
-<p><a href="http://blog.noobwei.top/categories/windows%E5%86%85%E6%A0%B8/">http://blog.noobwei.top/categories/windows%E5%86%85%E6%A0%B8/</a></p>
+<p><a href="http://blog.noobwei.top/2021/09/12/2021-09-12-%E6%9E%9A%E4%B8%BE%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%92%8C%E8%BF%9B%E7%A8%8B%E5%9B%9E%E8%B0%83%E4%BB%A5%E5%8F%8A%E5%8E%BB%E4%BF%9D%E6%8A%A4/">http://blog.noobwei.top/2021/09/12/2021-09-12-%E6%9E%9A%E4%B8%BE%E6%B3%A8%E5%86%8C%E8%A1%A8%E5%92%8C%E8%BF%9B%E7%A8%8B%E5%9B%9E%E8%B0%83%E4%BB%A5%E5%8F%8A%E5%8E%BB%E4%BF%9D%E6%8A%A4/</a></p>
 </blockquote>
                 
                   
@@ -1299,7 +1381,7 @@
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../../buy_someting/running/jogging_winter/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 秋冬夜跑" rel="prev">
+        <a href="msdn/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 官方文档快速查询" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1308,20 +1390,20 @@
               <span class="md-footer__direction">
                 上一页
               </span>
-              秋冬夜跑
+              官方文档快速查询
             </div>
           </div>
         </a>
       
       
         
-        <a href="../windows_core_programming/Calling_convention/" class="md-footer__link md-footer__link--next" aria-label="下一页: 调用约定" rel="next">
+        <a href="template/" class="md-footer__link md-footer__link--next" aria-label="下一页: 内核基础模板" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              调用约定
+              内核基础模板
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1352,10 +1434,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "header.autohide", "navigation.expand"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.e99e714c.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "header.autohide", "navigation.expand"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.8397ff9e.min.js", "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.c7d1b464.min.js"></script>
+      <script src="../../assets/javascripts/bundle.1e84347e.min.js"></script>
       
     
   </body>
