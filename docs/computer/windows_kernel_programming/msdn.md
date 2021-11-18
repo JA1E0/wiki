@@ -14,6 +14,10 @@ http://j00ru.vexillium.org/win32k_syscalls/
 
 http://j00ru.vexillium.org/win32k_x64/
 
+## 内核未公开函数
+
+http://undocumented.ntinternals.net/index.html
+
 ## NTSTATUS一览表：
 http://msdn.microsoft.com/en-us/library/cc704588.aspx
 
