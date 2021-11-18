@@ -27,6 +27,16 @@ http://msdn.microsoft.com/en-us/library/windows/hardware/hh994433
 ## 系统错误代码查询：
 https://msdn.microsoft.com/en-us/library/windows/desktop/ms681381
 
+## Windows内核结构
+
+https://www.geoffchappell.com/studies/windows/km/index.htm
+
+http://s.ntoskr.com/kernels/x64
+
+## Windows原版ISO下载
+
+https://tb.rg-adguard.net/public.php
+
 ## Win10驱动例子速查
 https://github.com/Microsoft/Windows-driver-samples
 
