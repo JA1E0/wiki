@@ -79,9 +79,11 @@ nav:
         - computer\security\WEB\Linux_Privilege_Escalation.md
     - computer\security\hw_redteam.md
   - 工具:
-    - Tool\keyboard_shortcuts.md
-    - Tool\Tools.md
-    - Tool\common_code.md
-    - Tool\vscode_shortcuts.md
-    - Tool\disassembly_simulation.md
+    - tool\keyboard_shortcuts.md
+    - tool\tools.md
+    - tool\common_code.md
+    - tool\vscode_shortcuts.md
+    - tool\disassembly_simulation.md
   - todo.md
+  - 娱乐:
+    - entertainment\index.md
