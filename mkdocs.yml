@@ -43,18 +43,6 @@ markdown_extensions:
   - pymdownx.tilde
 
 nav:
-  - 选购商品:
-    - GH60 客制化键盘:
-      - buy_someting\gh60\1_gh60_edition.md
-      - buy_someting\gh60\2_gh60_Materials.md
-      - buy_someting\gh60\3_gh60_install.md
-    - 烤箱:
-      - buy_someting\oven_微波炉\1_oven_knowledge.md
-      - buy_someting\oven_微波炉\2_oven_experience.md
-    - 厨刀:
-      - buy_someting\knife\knife.md
-    - 跑步:
-      - buy_someting\running\jogging_winter.md
   - 计算机:
     - windows内核编程:
       - computer\windows_kernel_programming\msdn.md
@@ -85,5 +73,17 @@ nav:
     - tool\vscode_shortcuts.md
     - tool\disassembly_simulation.md
   - todo.md
+  - 选购商品:
+    - GH60 客制化键盘:
+      - buy_someting\gh60\1_gh60_edition.md
+      - buy_someting\gh60\2_gh60_Materials.md
+      - buy_someting\gh60\3_gh60_install.md
+    - 烤箱:
+      - buy_someting\oven_微波炉\1_oven_knowledge.md
+      - buy_someting\oven_微波炉\2_oven_experience.md
+    - 厨刀:
+      - buy_someting\knife\knife.md
+    - 跑步:
+      - buy_someting\running\jogging_winter.md
   - 娱乐:
     - entertainment\index.md
