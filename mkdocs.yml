@@ -72,7 +72,6 @@ nav:
     - tool\common_code.md
     - tool\vscode_shortcuts.md
     - tool\disassembly_simulation.md
-  - todo.md
   - 选购商品:
     - GH60 客制化键盘:
       - buy_someting\gh60\1_gh60_edition.md
@@ -87,3 +86,4 @@ nav:
       - buy_someting\running\jogging_winter.md
   - 娱乐:
     - entertainment\index.md
+  - todo.md
