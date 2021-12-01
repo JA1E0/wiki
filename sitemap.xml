@@ -11,31 +11,6 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://wiki.noobwei.top/Tool/common_code/</loc>
-         <lastmod>2021-12-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.noobwei.top/Tool/disassembly_simulation/</loc>
-         <lastmod>2021-12-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.noobwei.top/Tool/keyboard_shortcuts/</loc>
-         <lastmod>2021-12-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.noobwei.top/Tool/tools/</loc>
-         <lastmod>2021-12-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
-         <loc>https://wiki.noobwei.top/Tool/vscode_shortcuts/</loc>
-         <lastmod>2021-12-01</lastmod>
-         <changefreq>daily</changefreq>
-    </url>
-    <url>
          <loc>https://wiki.noobwei.top/buy_someting/gh60/1_gh60_edition/</loc>
          <lastmod>2021-12-01</lastmod>
          <changefreq>daily</changefreq>
@@ -152,6 +127,31 @@
     </url>
     <url>
          <loc>https://wiki.noobwei.top/entertainment/</loc>
+         <lastmod>2021-12-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.noobwei.top/tool/common_code/</loc>
+         <lastmod>2021-12-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.noobwei.top/tool/disassembly_simulation/</loc>
+         <lastmod>2021-12-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.noobwei.top/tool/keyboard_shortcuts/</loc>
+         <lastmod>2021-12-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.noobwei.top/tool/tools/</loc>
+         <lastmod>2021-12-01</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://wiki.noobwei.top/tool/vscode_shortcuts/</loc>
          <lastmod>2021-12-01</lastmod>
          <changefreq>daily</changefreq>
     </url>

@@ -11,14 +11,14 @@
         <meta name="author" content="aWei">
       
       
-        <link rel="canonical" href="https://wiki.noobwei.top/Tool/common_code/">
+        <link rel="canonical" href="https://wiki.noobwei.top/tool/tools/">
       
       <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>常用调试代码 - aWei's Wiki</title>
+        <title>工具整理 - aWei's Wiki</title>
       
     
     
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              常用调试代码
+              工具整理
             
           </span>
         </div>
@@ -200,13 +200,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../tool/common_code.md" class="md-tabs__link">
+      <a href="../common_code/" class="md-tabs__link md-tabs__link--active">
         工具
       </a>
     </li>
@@ -884,12 +886,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" data-md-state="indeterminate" type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       <label class="md-nav__link" for="__nav_3">
         工具
@@ -907,8 +911,42 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tool/common_code.md" class="md-nav__link">
-        None
+      <a href="../common_code/" class="md-nav__link">
+        常用调试代码
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        工具整理
+      </a>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keyboard_shortcuts/" class="md-nav__link">
+        工具设置
       </a>
     </li>
   
@@ -919,8 +957,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tool/tools.md" class="md-nav__link">
-        None
+      <a href="../vscode_shortcuts/" class="md-nav__link">
+        VsCode快捷键
       </a>
     </li>
   
@@ -931,32 +969,8 @@
   
   
     <li class="md-nav__item">
-      <a href="../../tool/keyboard_shortcuts.md" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tool/vscode_shortcuts.md" class="md-nav__link">
-        None
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../tool/disassembly_simulation.md" class="md-nav__link">
-        None
+      <a href="../disassembly_simulation/" class="md-nav__link">
+        汇编与反汇编引擎、模拟执行引擎
       </a>
     </li>
   
@@ -1041,69 +1055,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    别人常用的断言宏
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#powershell" class="md-nav__link">
-    powershell策略改变
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#netdll" class="md-nav__link">
-    .Net的DLL载入
-  </a>
-  
-    <nav class="md-nav" aria-label=".Net的DLL载入">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    示例代码
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#16guid" class="md-nav__link">
-    根据16进制字符串计算GUID
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    递归下载网页文件
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#imphash" class="md-nav__link">
-    计算imphash
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1116,87 +1069,17 @@
               
                 
                 
-                  <h1>常用调试代码</h1>
-                
-                <h2 id="_1">别人常用的断言宏<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><a href="http://betacat.github.io/2014/01/12/assert-defensive-offensive-programming/">http://betacat.github.io/2014/01/12/assert-defensive-offensive-programming/</a></p>
-<div class="highlight"><pre><span></span><code><span class="cp">#ifdef DEBUG</span>
-<span class="cp">#define ASSERT(x) assert(x)</span>
-<span class="cp">#else</span>
-<span class="cp">#define ASSERT(x)</span>
-<span class="cp">#endif</span>
-
-<span class="cp">#define ASSERT_RETURN(x)            {ASSERT(x); if(!(x)) {return;}}</span>
-<span class="cp">#define ASSERT_RETURN_VAL(x, ret)   {ASSERT(x); if(!(x)) {return ret;}}</span>
-<span class="cp">#define ASSERT_GOTO(x, label)       {ASSERT(x); if(!(x)) {goto label;}}</span>
-<span class="cp">#define ASSERT_BREAK(x)             {ASSERT(x); if(!(x)) {break;}}</span>
-<span class="cp">#define ASSERT_CONTINUE(x)          {ASSERT(x); if(!(x)) {continue;}}</span>
-</code></pre></div>
-<h2 id="powershell">powershell策略改变<a class="headerlink" href="#powershell" title="Permanent link">&para;</a></h2>
-<p>管理员权限
-set-executionpolicy remotesigned</p>
-<h2 id="netdll">.Net的DLL载入<a class="headerlink" href="#netdll" title="Permanent link">&para;</a></h2>
-<p>手动反射加载Dll中的函数</p>
-<p>Assembly.Load()</p>
-<p>Assembly.LoadFile()</p>
-<p>Assembly.LoadFrom()</p>
-<h3 id="_2">示例代码<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
-<p>三者代码,调用dll中的方法几乎一致</p>
-<p>Load一般针对字符串</p>
-<p>LoadFile,LoadFrom加载程序,LoadFile加载单文件,LoadFrom会自动加载依赖的程序集.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">string</span> <span class="n">assemblyAndPathName</span> <span class="p">=</span> <span class="s">@&quot;path&quot;</span><span class="p">;</span>
-            <span class="n">Assembly</span> <span class="n">testAsm</span> <span class="p">=</span> <span class="n">Assembly</span><span class="p">.</span><span class="n">LoadFile</span><span class="p">(</span><span class="n">assemblyAndPathName</span><span class="p">);</span>
-            <span class="n">Type</span> <span class="n">itype</span> <span class="p">=</span> <span class="n">testAsm</span><span class="p">.</span><span class="n">GetType</span><span class="p">(</span><span class="s">&quot;assemblyName.ClassName&quot;</span><span class="p">);</span><span class="c1">//程序集名.类名</span>
-            <span class="kt">object</span> <span class="n">obj</span> <span class="p">=</span> <span class="n">System</span><span class="p">.</span><span class="n">Activator</span><span class="p">.</span><span class="n">CreateInstance</span><span class="p">(</span><span class="n">itype</span><span class="p">);</span>
-            <span class="n">MethodInfo</span> <span class="n">method1</span> <span class="p">=</span> <span class="n">itype</span><span class="p">.</span><span class="n">GetMethod</span><span class="p">(</span><span class="s">&quot;MethodName&quot;</span><span class="p">);</span>
-            <span class="n">method1</span><span class="p">.</span><span class="n">Invoke</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span> <span class="k">new</span> <span class="kt">object</span><span class="p">[]{</span>
-                <span class="s">&quot;a&quot;</span><span class="p">,</span><span class="s">&quot;b&quot;</span>
-            <span class="p">});</span><span class="c1">//参数.</span>
-</code></pre></div>
-<h2 id="16guid">根据16进制字符串计算GUID<a class="headerlink" href="#16guid" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">using</span> <span class="nn">System</span><span class="p">;</span>
-
-<span class="k">namespace</span> <span class="nn">ConsoleApp3</span>
-<span class="p">{</span>
-    <span class="k">class</span> <span class="nc">Program</span>
-    <span class="p">{</span>
-        <span class="k">static</span> <span class="k">void</span> <span class="nf">Main</span><span class="p">()</span>
-        <span class="p">{</span>
-            <span class="c1">// https://stackoverflow.com/questions/56638890/c-sharp-convert-active-directory-hexadecimal-to-guid</span>
-            <span class="kt">byte</span><span class="p">[]</span> <span class="n">bytearray</span> <span class="p">=</span> <span class="n">StringToByteArray</span><span class="p">(</span><span class="s">&quot;11F890453A1DD011891F00AA004B2E24&quot;</span><span class="p">);</span>
-
-            <span class="c1">// https://docs.microsoft.com/en-us/dotnet/api/system.guid.tobytearray?view=netframework-4.8</span>
-            <span class="n">Guid</span> <span class="n">guid</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Guid</span><span class="p">(</span><span class="n">bytearray</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Guid: {0}&quot;</span><span class="p">,</span> <span class="n">guid</span><span class="p">);</span>
-            <span class="n">Byte</span><span class="p">[]</span> <span class="n">bytes</span> <span class="p">=</span> <span class="n">guid</span><span class="p">.</span><span class="n">ToByteArray</span><span class="p">();</span>
-            <span class="k">foreach</span> <span class="p">(</span><span class="kt">var</span> <span class="n">byt</span> <span class="k">in</span> <span class="n">bytes</span><span class="p">)</span>
-                <span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;{0:X2} &quot;</span><span class="p">,</span> <span class="n">byt</span><span class="p">);</span>
-
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
-            <span class="n">Guid</span> <span class="n">guid2</span> <span class="p">=</span> <span class="k">new</span> <span class="n">Guid</span><span class="p">(</span><span class="n">bytes</span><span class="p">);</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Guid: {0} (Same as First Guid: {1})&quot;</span><span class="p">,</span> <span class="n">guid2</span><span class="p">,</span> <span class="n">guid2</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">guid</span><span class="p">));</span>
-            <span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
-
-        <span class="p">}</span>
-
-        <span class="k">public</span> <span class="k">static</span> <span class="kt">byte</span><span class="p">[]</span> <span class="nf">StringToByteArray</span><span class="p">(</span><span class="n">String</span> <span class="n">hex</span><span class="p">)</span>
-        <span class="p">{</span>
-            <span class="kt">int</span> <span class="n">NumberChars</span> <span class="p">=</span> <span class="n">hex</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
-            <span class="kt">byte</span><span class="p">[]</span> <span class="n">bytes</span> <span class="p">=</span> <span class="k">new</span> <span class="kt">byte</span><span class="p">[</span><span class="n">NumberChars</span> <span class="p">/</span> <span class="m">2</span><span class="p">];</span>
-            <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="p">=</span> <span class="m">0</span><span class="p">;</span> <span class="n">i</span> <span class="p">&lt;</span> <span class="n">NumberChars</span><span class="p">;</span> <span class="n">i</span> <span class="p">+=</span> <span class="m">2</span><span class="p">)</span>
-                <span class="n">bytes</span><span class="p">[</span><span class="n">i</span> <span class="p">/</span> <span class="m">2</span><span class="p">]</span> <span class="p">=</span> <span class="n">Convert</span><span class="p">.</span><span class="n">ToByte</span><span class="p">(</span><span class="n">hex</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="m">2</span><span class="p">),</span> <span class="m">16</span><span class="p">);</span>
-            <span class="k">return</span> <span class="n">bytes</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div>
-<h2 id="_3">递归下载网页文件<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p>wget -c -r -p -k -np url</p>
-<h2 id="imphash">计算imphash<a class="headerlink" href="#imphash" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">pefile</span>
-<span class="n">pe</span> <span class="o">=</span> <span class="n">pefile</span><span class="o">.</span><span class="n">PE</span><span class="p">(</span><span class="s2">&quot;YourFile.exe&quot;</span><span class="p">)</span>
-<span class="n">pe</span><span class="o">.</span><span class="n">get_imphash</span><span class="p">()</span>
-</code></pre></div>
+                <h1 id="_1">工具整理<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h1 id="synergy-or-barrier">Synergy Or barrier<a class="headerlink" href="#synergy-or-barrier" title="Permanent link">&para;</a></h1>
+<p>局域网 , 两台机器一个键盘鼠标</p>
+<h1 id="snipaste">Snipaste<a class="headerlink" href="#snipaste" title="Permanent link">&para;</a></h1>
+<p>截图的悬浮窗可至于页面最顶层,用作临时提示很有用</p>
+<h1 id="sourcetree">SourceTree<a class="headerlink" href="#sourcetree" title="Permanent link">&para;</a></h1>
+<p>Git图形化管理工具</p>
+<h1 id="gcc">gcc 汇编<a class="headerlink" href="#gcc" title="Permanent link">&para;</a></h1>
+<p><a href="https://www.linuxprobe.com/gcc-how-to.html">https://www.linuxprobe.com/gcc-how-to.html</a></p>
+<h1 id="_2">系统调用表<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h1>
+<p><a href="https://filippo.io/linux-syscall-table/">https://filippo.io/linux-syscall-table/</a> </p>
                 
                   
                 
@@ -1214,6 +1097,41 @@ set-executionpolicy remotesigned</p>
       
         
 <footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../common_code/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 常用调试代码" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              常用调试代码
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../keyboard_shortcuts/" class="md-footer__link md-footer__link--next" aria-label="下一页: 工具设置" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              工具设置
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
