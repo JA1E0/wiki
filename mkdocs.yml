@@ -49,6 +49,7 @@ nav:
       - computer\windows_kernel_programming\index.md
       - computer\windows_kernel_programming\template.md
     - windows编程:
+      - computer\windows_core_programming\code_snippet.md
       - computer\windows_core_programming\Calling_convention.md
       - computer\windows_core_programming\Inject.md
       - computer\windows_core_programming\multi_thread.md
