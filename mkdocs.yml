@@ -54,6 +54,7 @@ nav:
       - computer\windows_core_programming\Inject.md
       - computer\windows_core_programming\multi_thread.md
     - 病毒分析:
+      - computer\security\idapython.md
       - YARA:
         - computer\security\malware\YARA\creating_yara.md
         - computer\security\malware\YARA\yara_docs.md
