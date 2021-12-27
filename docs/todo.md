@@ -3,6 +3,11 @@
     date: 2021-09-23
 --- 
 
+## 2022 Resolutions
+
+- **TOEFL 80+**
+- **OSCP**
+
 ## OLLVM
 
 ### 基于microcode
