@@ -508,6 +508,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getprocaddress" class="md-nav__link">
+    批量更改GetProcAddress获取的函数名
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1135,6 +1142,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#getprocaddress" class="md-nav__link">
+    批量更改GetProcAddress获取的函数名
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1169,6 +1183,40 @@
     <span class="nb">print</span><span class="p">(</span><span class="n">result</span><span class="p">)</span>
     <span class="n">ida_bytes</span><span class="o">.</span><span class="n">patch_byte</span><span class="p">(</span><span class="n">start</span><span class="o">+</span><span class="n">i</span><span class="p">,</span><span class="n">result</span><span class="p">)</span>
 </code></pre></div>
+<h3 id="getprocaddress">批量更改GetProcAddress获取的函数名<a class="headerlink" href="#getprocaddress" title="Permanent link">&para;</a></h3>
+<ol>
+<li>遍历函数的调用</li>
+<li>获取传入的字符串</li>
+<li>获取写入函数地址的地址并修改
+<div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">idc</span> 
+<span class="kn">import</span> <span class="nn">idaapi</span>
+
+<span class="k">def</span> <span class="nf">change_function_name</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span><span class="n">function_name</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">idc</span><span class="o">.</span><span class="n">print_insn_mnem</span><span class="p">(</span><span class="n">addr</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;mov&quot;</span> <span class="ow">and</span> <span class="n">idc</span><span class="o">.</span><span class="n">print_operand</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="s2">&quot;eax&quot;</span><span class="p">:</span>
+        <span class="n">mem_addr</span> <span class="o">=</span> <span class="n">idc</span><span class="o">.</span><span class="n">get_operand_value</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">new_name</span> <span class="o">=</span> <span class="s2">&quot;Call_&quot;</span> <span class="o">+</span> <span class="n">function_name</span>
+        <span class="n">idc</span><span class="o">.</span><span class="n">set_name</span><span class="p">(</span><span class="n">mem_addr</span><span class="p">,</span><span class="n">new_name</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Change </span><span class="si">{0}</span><span class="s2"> to </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">mem_addr</span><span class="p">)),</span><span class="n">new_name</span><span class="p">))</span>
+
+<span class="c1"># 0x100056F0 = GetProcAddress</span>
+<span class="k">for</span> <span class="n">xref</span> <span class="ow">in</span> <span class="n">XrefsTo</span><span class="p">(</span><span class="mh">0x100056F0</span><span class="p">,</span><span class="mi">0</span><span class="p">):</span>
+    <span class="c1">#   Data_Read(3) Data_Write(2)</span>
+    <span class="c1">#   print(xref.type, XrefTypeName(xref.type), &#39;from&#39;, hex(xref.frm), &#39;to&#39;, hex(xref.to))</span>
+    <span class="k">if</span><span class="p">(</span><span class="n">xref</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="mi">3</span><span class="p">):</span>
+        <span class="c1">#print(hex(xref.frm))</span>
+        <span class="n">argv</span> <span class="o">=</span> <span class="n">idaapi</span><span class="o">.</span><span class="n">get_arg_addrs</span><span class="p">(</span><span class="n">xref</span><span class="o">.</span><span class="n">frm</span><span class="p">)</span>
+        <span class="c1"># Get Address Of String</span>
+        <span class="n">tmp</span> <span class="o">=</span> <span class="n">idc</span><span class="o">.</span><span class="n">get_operand_value</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">function_name</span> <span class="o">=</span> <span class="n">idc</span><span class="o">.</span><span class="n">get_strlit_contents</span><span class="p">(</span><span class="n">tmp</span><span class="p">)</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> 
+        <span class="c1"># ReName</span>
+        <span class="c1"># 2 004 68 64 50 00 10                      push    offset aWsafdisset ; &quot;__WSAFDIsSet&quot;</span>
+        <span class="c1"># .text:10001307 008 56                                  push    esi             ; hModule</span>
+        <span class="c1"># .text:10001308 00C A3 34 57 00 10                      mov     Call___WSAFDIsSet, eax</span>
+        <span class="c1"># .text:1000130D 00C FF 15 F0 56 00 10                   call    GetProcAddress_0</span>
+        <span class="n">addr</span> <span class="o">=</span> <span class="n">idc</span><span class="o">.</span><span class="n">prev_head</span><span class="p">(</span><span class="n">xref</span><span class="o">.</span><span class="n">frm</span><span class="p">)</span>
+        <span class="n">change_function_name</span><span class="p">(</span><span class="n">addr</span><span class="p">,</span><span class="n">function_name</span><span class="p">)</span>
+</code></pre></div></li>
+</ol>
                 
                   
                 
