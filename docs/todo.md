@@ -6,7 +6,10 @@
 ## 2022 Resolutions
 
 - **TOEFL 80+**
-- **OSCP**
+  <br>https://www.youtube.com/watch?v=KxpzbcNGk7Y&list=PLqPnE6yEIKB_ZzBHWDkMMxXyPZy9w_O9f
+  <br>https://www.shelker.com/
+- **OSCP**<br>
+ https://www.netsecfocus.com/oscp/2021/05/06/The_Journey_to_Try_Harder-_TJnull-s_Preparation_Guide_for_PEN-200_PWK_OSCP_2.0.html
 
 ## OLLVM
 
