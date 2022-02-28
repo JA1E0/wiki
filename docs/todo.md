@@ -11,20 +11,8 @@
 - **OSCP**<br>
  https://www.netsecfocus.com/oscp/2021/05/06/The_Journey_to_Try_Harder-_TJnull-s_Preparation_Guide_for_PEN-200_PWK_OSCP_2.0.html
 
-## OLLVM
-
-### 基于microcode
-- 使用IDA microcode去除ollvm混淆
-- https://xz.aliyun.com/t/6749#toc-3
-- https://xz.aliyun.com/t/6795
-
-
-### 基于Miasm框架
-
-- Deobfuscation: recovering an OLLVM-protected program
-- https://blog.quarkslab.com/deobfuscation-recovering-an-ollvm-protected-program.html
-
-
+- Front-End<br>
+  https://www.udemy.com/course/the-web-developer-bootcamp/
 
 ## 常见脱壳
 ## 写壳 
