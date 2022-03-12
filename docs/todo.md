@@ -14,6 +14,9 @@
 - Front-End<br>
   https://www.udemy.com/course/the-web-developer-bootcamp/
 
+- Modern C++ 11<br>
+  https://changkun.de/modern-cpp/zh-cn/00-preface/
+
 ## 常见脱壳
 ## 写壳 
 ## VMP
