@@ -11,21 +11,21 @@
         <meta name="author" content="aWei">
       
       
-        <link rel="canonical" href="https://wiki.noobwei.top/computer/windows_kernel_programming/msdn/">
+        <link rel="canonical" href="https://wiki.noobwei.top/tool/kali_repair_network/">
       
-      <link rel="icon" href="../../../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.1, mkdocs-material-7.1.9">
     
     
       
-        <title>官方文档快速查询 - aWei's Wiki</title>
+        <title>修复Kali突然无法解析域名的问题 - aWei's Wiki</title>
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.ca7ac06f.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ca7ac06f.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.f1a3b89f.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.f1a3b89f.min.css">
         
           
           
@@ -61,7 +61,7 @@
     <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-purple" data-md-color-accent="deep-purple">
   
     
-    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    <script>function __prefix(e){return new URL("../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ssdt" class="md-skip">
+        <a href="#kali" class="md-skip">
           跳转至
         </a>
       
@@ -80,7 +80,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../../.." title="aWei&#39;s Wiki" class="md-header__button md-logo" aria-label="aWei's Wiki" data-md-component="logo">
+    <a href="../.." title="aWei&#39;s Wiki" class="md-header__button md-logo" aria-label="aWei's Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -99,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              官方文档快速查询
+              修复Kali突然无法解析域名的问题
             
           </span>
         </div>
@@ -154,8 +154,6 @@
         
   
   
-    
-  
 
 
   
@@ -167,7 +165,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="./" class="md-tabs__link md-tabs__link--active">
+      <a href="../../computer/windows_kernel_programming/msdn/" class="md-tabs__link">
         计算机
       </a>
     </li>
@@ -179,13 +177,15 @@
         
   
   
+    
+  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../../../tool/common_code/" class="md-tabs__link">
+      <a href="../common_code/" class="md-tabs__link md-tabs__link--active">
         碎片化帮助
       </a>
     </li>
@@ -206,7 +206,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../buy_someting/gh60/1_gh60_edition/" class="md-tabs__link">
+      <a href="../../buy_someting/gh60/1_gh60_edition/" class="md-tabs__link">
         选购商品
       </a>
     </li>
@@ -224,7 +224,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../../../entertainment/" class="md-tabs__link">
+      <a href="../../entertainment/" class="md-tabs__link">
         娱乐
       </a>
     </li>
@@ -237,7 +237,7 @@
 
 
   <li class="md-tabs__item">
-    <a href="../../../todo/" class="md-tabs__link">
+    <a href="../../todo/" class="md-tabs__link">
       TODO
     </a>
   </li>
@@ -263,7 +263,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../../.." title="aWei&#39;s Wiki" class="md-nav__button md-logo" aria-label="aWei's Wiki" data-md-component="logo">
+    <a href="../.." title="aWei&#39;s Wiki" class="md-nav__button md-logo" aria-label="aWei's Wiki" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
@@ -280,14 +280,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" data-md-state="indeterminate" type="checkbox" id="__nav_1" checked>
       
       <label class="md-nav__link" for="__nav_1">
         计算机
@@ -303,14 +301,12 @@
             
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" type="checkbox" id="__nav_1_1" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_1" data-md-state="indeterminate" type="checkbox" id="__nav_1_1" checked>
       
       <label class="md-nav__link" for="__nav_1_1">
         windows内核编程
@@ -326,103 +322,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          官方文档快速查询
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../computer/windows_kernel_programming/msdn/" class="md-nav__link">
         官方文档快速查询
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ssdt" class="md-nav__link">
-    SSDT调用号
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shadowssdt" class="md-nav__link">
-    ShadowSSDT调用号
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    内核未公开函数
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ntstatus" class="md-nav__link">
-    NTSTATUS一览表：
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    蓝屏代码一览表：
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    系统错误代码查询：
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows内核结构
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#windowsiso" class="md-nav__link">
-    Windows原版ISO下载
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#win10" class="md-nav__link">
-    Win10驱动例子速查
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -432,7 +336,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../" class="md-nav__link">
+      <a href="../../computer/windows_kernel_programming/" class="md-nav__link">
         内核笔记快速查询
       </a>
     </li>
@@ -444,7 +348,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../template/" class="md-nav__link">
+      <a href="../../computer/windows_kernel_programming/template/" class="md-nav__link">
         内核基础模板
       </a>
     </li>
@@ -483,7 +387,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows_core_programming/code_snippet/" class="md-nav__link">
+      <a href="../../computer/windows_core_programming/code_snippet/" class="md-nav__link">
         win32代码片段
       </a>
     </li>
@@ -495,7 +399,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows_core_programming/Calling_convention/" class="md-nav__link">
+      <a href="../../computer/windows_core_programming/Calling_convention/" class="md-nav__link">
         调用约定
       </a>
     </li>
@@ -507,7 +411,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows_core_programming/Inject/" class="md-nav__link">
+      <a href="../../computer/windows_core_programming/Inject/" class="md-nav__link">
         各种注入提示
       </a>
     </li>
@@ -519,7 +423,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../windows_core_programming/multi_thread/" class="md-nav__link">
+      <a href="../../computer/windows_core_programming/multi_thread/" class="md-nav__link">
         多线程有关
       </a>
     </li>
@@ -558,7 +462,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/idapython/" class="md-nav__link">
+      <a href="../../computer/security/idapython/" class="md-nav__link">
         IDA Python
       </a>
     </li>
@@ -591,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/malware/YARA/creating_yara/" class="md-nav__link">
+      <a href="../../computer/security/malware/YARA/creating_yara/" class="md-nav__link">
         编写Yara规则检测恶意软件
       </a>
     </li>
@@ -603,7 +507,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/malware/YARA/yara_docs/" class="md-nav__link">
+      <a href="../../computer/security/malware/YARA/yara_docs/" class="md-nav__link">
         官方文档与signature
       </a>
     </li>
@@ -615,7 +519,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/malware/YARA/Kaspersky_yara_note/" class="md-nav__link">
+      <a href="../../computer/security/malware/YARA/Kaspersky_yara_note/" class="md-nav__link">
         卡巴斯基yara笔记
       </a>
     </li>
@@ -633,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/office_cve/" class="md-nav__link">
+      <a href="../../computer/security/office_cve/" class="md-nav__link">
         Office常见CVE
       </a>
     </li>
@@ -672,7 +576,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/threat_intelligence/awesome-threat-intelligence/" class="md-nav__link">
+      <a href="../../computer/security/threat_intelligence/awesome-threat-intelligence/" class="md-nav__link">
         威胁情报大合集
       </a>
     </li>
@@ -684,7 +588,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/threat_intelligence/OSINT/bookmarks_menu/" class="md-nav__link">
+      <a href="../../computer/security/threat_intelligence/OSINT/bookmarks_menu/" class="md-nav__link">
         OSINT 书签
       </a>
     </li>
@@ -696,7 +600,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/threat_intelligence/OSINT/OSINT_framework/" class="md-nav__link">
+      <a href="../../computer/security/threat_intelligence/OSINT/OSINT_framework/" class="md-nav__link">
         OSINT 框架
       </a>
     </li>
@@ -735,7 +639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/WEB/Practice_platform/" class="md-nav__link">
+      <a href="../../computer/security/WEB/Practice_platform/" class="md-nav__link">
         Web练习平台
       </a>
     </li>
@@ -747,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/WEB/Linux_Privilege_Escalation/" class="md-nav__link">
+      <a href="../../computer/security/WEB/Linux_Privilege_Escalation/" class="md-nav__link">
         linux特权提升
       </a>
     </li>
@@ -765,7 +669,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../security/hw_redteam/" class="md-nav__link">
+      <a href="../../computer/security/hw_redteam/" class="md-nav__link">
         分析tips-redteam使用工具
       </a>
     </li>
@@ -784,12 +688,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
         碎片化帮助
@@ -807,7 +713,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tool/common_code/" class="md-nav__link">
+      <a href="../common_code/" class="md-nav__link">
         常用调试代码
       </a>
     </li>
@@ -819,7 +725,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tool/tools/" class="md-nav__link">
+      <a href="../tools/" class="md-nav__link">
         工具整理
       </a>
     </li>
@@ -831,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tool/keyboard_shortcuts/" class="md-nav__link">
+      <a href="../keyboard_shortcuts/" class="md-nav__link">
         工具设置
       </a>
     </li>
@@ -843,7 +749,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tool/vscode_shortcuts/" class="md-nav__link">
+      <a href="../vscode_shortcuts/" class="md-nav__link">
         VsCode快捷键
       </a>
     </li>
@@ -855,7 +761,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../tool/disassembly_simulation/" class="md-nav__link">
+      <a href="../disassembly_simulation/" class="md-nav__link">
         汇编与反汇编引擎、模拟执行引擎
       </a>
     </li>
@@ -865,11 +771,21 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../../tool/kali_repair_network/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         修复Kali突然无法解析域名的问题
       </a>
+      
     </li>
   
 
@@ -930,7 +846,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../buy_someting/gh60/1_gh60_edition/" class="md-nav__link">
+      <a href="../../buy_someting/gh60/1_gh60_edition/" class="md-nav__link">
         0x01 GH60的各种版本
       </a>
     </li>
@@ -942,7 +858,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../buy_someting/gh60/2_gh60_Materials/" class="md-nav__link">
+      <a href="../../buy_someting/gh60/2_gh60_Materials/" class="md-nav__link">
         0x02 GH60的零件清单
       </a>
     </li>
@@ -954,7 +870,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../buy_someting/gh60/3_gh60_install/" class="md-nav__link">
+      <a href="../../buy_someting/gh60/3_gh60_install/" class="md-nav__link">
         0x03 GH60的拼装
       </a>
     </li>
@@ -993,7 +909,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../buy_someting/oven_%E5%BE%AE%E6%B3%A2%E7%82%89/1_oven_knowledge/" class="md-nav__link">
+      <a href="../../buy_someting/oven_%E5%BE%AE%E6%B3%A2%E7%82%89/1_oven_knowledge/" class="md-nav__link">
         烤箱选购
       </a>
     </li>
@@ -1005,7 +921,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../buy_someting/oven_%E5%BE%AE%E6%B3%A2%E7%82%89/2_oven_experience/" class="md-nav__link">
+      <a href="../../buy_someting/oven_%E5%BE%AE%E6%B3%A2%E7%82%89/2_oven_experience/" class="md-nav__link">
         使用心得
       </a>
     </li>
@@ -1044,7 +960,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../buy_someting/knife/knife/" class="md-nav__link">
+      <a href="../../buy_someting/knife/knife/" class="md-nav__link">
         厨刀推荐
       </a>
     </li>
@@ -1083,7 +999,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../buy_someting/running/jogging_winter/" class="md-nav__link">
+      <a href="../../buy_someting/running/jogging_winter/" class="md-nav__link">
         秋冬夜跑
       </a>
     </li>
@@ -1131,7 +1047,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../entertainment/" class="md-nav__link">
+      <a href="../../entertainment/" class="md-nav__link">
         没事就看片
       </a>
     </li>
@@ -1152,7 +1068,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../../todo/" class="md-nav__link">
+      <a href="../../todo/" class="md-nav__link">
         TODO
       </a>
     </li>
@@ -1175,77 +1091,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目录
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ssdt" class="md-nav__link">
-    SSDT调用号
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#shadowssdt" class="md-nav__link">
-    ShadowSSDT调用号
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    内核未公开函数
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ntstatus" class="md-nav__link">
-    NTSTATUS一览表：
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    蓝屏代码一览表：
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    系统错误代码查询：
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#windows" class="md-nav__link">
-    Windows内核结构
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#windowsiso" class="md-nav__link">
-    Windows原版ISO下载
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#win10" class="md-nav__link">
-    Win10驱动例子速查
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1258,35 +1105,81 @@
               
                 
                 
-                  <h1>官方文档快速查询</h1>
-                
-                <h2 id="ssdt">SSDT调用号<a class="headerlink" href="#ssdt" title="Permanent link">&para;</a></h2>
-<p><a href="http://j00ru.vexillium.org/ntapi/">http://j00ru.vexillium.org/ntapi/</a></p>
-<p><a href="http://j00ru.vexillium.org/ntapi_64/">http://j00ru.vexillium.org/ntapi_64/</a></p>
-<h2 id="shadowssdt">ShadowSSDT调用号<a class="headerlink" href="#shadowssdt" title="Permanent link">&para;</a></h2>
-<p><a href="http://j00ru.vexillium.org/win32k_syscalls/">http://j00ru.vexillium.org/win32k_syscalls/</a></p>
-<p><a href="http://j00ru.vexillium.org/win32k_x64/">http://j00ru.vexillium.org/win32k_x64/</a></p>
-<h2 id="_1">内核未公开函数<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p><a href="http://undocumented.ntinternals.net/index.html">http://undocumented.ntinternals.net/index.html</a></p>
-<h2 id="ntstatus">NTSTATUS一览表：<a class="headerlink" href="#ntstatus" title="Permanent link">&para;</a></h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/cc704588.aspx">http://msdn.microsoft.com/en-us/library/cc704588.aspx</a></p>
-<h2 id="_2">蓝屏代码一览表：<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<p><a href="http://msdn.microsoft.com/en-us/library/windows/hardware/hh994433">http://msdn.microsoft.com/en-us/library/windows/hardware/hh994433</a></p>
-<h2 id="_3">系统错误代码查询：<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
-<p><a href="https://msdn.microsoft.com/en-us/library/windows/desktop/ms681381">https://msdn.microsoft.com/en-us/library/windows/desktop/ms681381</a></p>
-<h2 id="windows">Windows内核结构<a class="headerlink" href="#windows" title="Permanent link">&para;</a></h2>
-<p><a href="https://www.geoffchappell.com/studies/windows/km/index.htm">https://www.geoffchappell.com/studies/windows/km/index.htm</a></p>
-<p><a href="http://s.ntoskr.com/kernels/x64">http://s.ntoskr.com/kernels/x64</a></p>
-<h2 id="windowsiso">Windows原版ISO下载<a class="headerlink" href="#windowsiso" title="Permanent link">&para;</a></h2>
-<p><a href="https://tb.rg-adguard.net/public.php">https://tb.rg-adguard.net/public.php</a></p>
-<h2 id="win10">Win10驱动例子速查<a class="headerlink" href="#win10" title="Permanent link">&para;</a></h2>
-<p><a href="https://github.com/Microsoft/Windows-driver-samples">https://github.com/Microsoft/Windows-driver-samples</a></p>
-<blockquote>
-<p>参考
-<a href="http://www.m5home.com/bbs/thread-8012-1-1.html">http://www.m5home.com/bbs/thread-8012-1-1.html</a></p>
-</blockquote>
-                
-                  
+                <h1 id="kali">修复Kali突然无法解析域名的问题<a class="headerlink" href="#kali" title="Permanent link">&para;</a></h1>
+<ol>
+<li>先将VMnet 恢复默认设置</li>
+</ol>
+<p><img alt="image-20220317100256740" src="../../assets/img/kali_repair_network/image-20220317100256740.png" /></p>
+<ol>
+<li>
+<p>NAT模式</p>
+</li>
+<li>
+<p>update <code>/etc/network/interfaces</code></p>
+</li>
+</ol>
+<div class="highlight"><pre><span></span><code>┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+└─$ curl baidu.com                                                                                             <span class="m">2</span> ⨯
+curl: <span class="o">(</span><span class="m">6</span><span class="o">)</span> Could not resolve host: baidu.com
+
+┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+└─$ sudo nano /etc/network/interfaces                   
+
+┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+└─$ cat /etc/network/interfaces
+<span class="c1"># This file describes the network interfaces available on your system</span>
+<span class="c1"># and how to activate them. For more information, see interfaces(5).</span>
+
+<span class="nb">source</span> /etc/network/interfaces.d/*
+
+<span class="c1"># The loopback network interface</span>
+auto lo
+iface lo inet loopback
+
+auto eth0
+iface eth0 inet dhcp
+address <span class="m">192</span>.168.253.0 <span class="c1">#修改成上述的subnet IP</span>
+netmask <span class="m">255</span>.255.255.0
+gateway <span class="m">192</span>.168.253.0 <span class="c1">#与address一致</span>
+
+
+┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+└─$ /etc/init.d/networking restart 
+Restarting networking <span class="o">(</span>via systemctl<span class="o">)</span>: networking.service<span class="o">====</span> AUTHENTICATING FOR org.freedesktop.systemd1.manage-units <span class="o">===</span>
+Authentication is required to restart <span class="s1">&#39;networking.service&#39;</span>.
+Authenticating as: koko,,, <span class="o">(</span>koko<span class="o">)</span>
+Password: 
+<span class="o">====</span> AUTHENTICATION <span class="nv">COMPLETE</span> <span class="o">===</span>
+.
+
+┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+└─$ systemctl status networking.service 
+● networking.service - Raise network interfaces
+     Loaded: loaded <span class="o">(</span>/lib/systemd/system/networking.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: enabled<span class="o">)</span>
+     Active: active <span class="o">(</span>exited<span class="o">)</span> since Wed <span class="m">2022</span>-03-16 <span class="m">21</span>:54:04 EDT<span class="p">;</span> 12s ago
+       Docs: man:interfaces<span class="o">(</span><span class="m">5</span><span class="o">)</span>
+    Process: <span class="m">2334</span> <span class="nv">ExecStart</span><span class="o">=</span>/sbin/ifup -a --read-environment <span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited, <span class="nv">status</span><span class="o">=</span><span class="m">0</span>/SUCCESS<span class="o">)</span>
+   Main PID: <span class="m">2334</span> <span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited, <span class="nv">status</span><span class="o">=</span><span class="m">0</span>/SUCCESS<span class="o">)</span>
+      Tasks: <span class="m">4</span> <span class="o">(</span>limit: <span class="m">4600</span><span class="o">)</span>
+     Memory: <span class="m">1</span>.8M
+        CPU: 123ms
+     CGroup: /system.slice/networking.service
+             └─2365 /sbin/dhclient -4 -v -i -pf /run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases -I -&gt;
+
+
+┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
+└─$ ping baidu.com                                                                                           <span class="m">130</span> ⨯
+PING baidu.com <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span> <span class="m">56</span><span class="o">(</span><span class="m">84</span><span class="o">)</span> bytes of data.
+<span class="m">64</span> bytes from <span class="m">220</span>.181.38.251 <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">1</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">128</span> <span class="nv">time</span><span class="o">=</span><span class="m">34</span>.5 ms
+<span class="m">64</span> bytes from <span class="m">220</span>.181.38.251 <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">2</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">128</span> <span class="nv">time</span><span class="o">=</span><span class="m">35</span>.8 ms
+<span class="m">64</span> bytes from <span class="m">220</span>.181.38.251 <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">3</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">128</span> <span class="nv">time</span><span class="o">=</span><span class="m">35</span>.3 ms
+<span class="m">64</span> bytes from <span class="m">220</span>.181.38.251 <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">4</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">128</span> <span class="nv">time</span><span class="o">=</span><span class="m">36</span>.1 ms
+<span class="m">64</span> bytes from <span class="m">220</span>.181.38.251 <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">5</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">128</span> <span class="nv">time</span><span class="o">=</span><span class="m">34</span>.9 ms
+^C
+--- baidu.com ping statistics ---
+<span class="m">5</span> packets transmitted, <span class="m">5</span> received, <span class="m">0</span>% packet loss, <span class="nb">time</span> 4007ms
+rtt min/avg/max/mdev <span class="o">=</span> <span class="m">34</span>.450/35.321/36.077/0.587 ms
+</code></pre></div>
                 
               
               
@@ -1305,15 +1198,30 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
+        
+        <a href="../disassembly_simulation/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 汇编与反汇编引擎、模拟执行引擎" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              汇编与反汇编引擎、模拟执行引擎
+            </div>
+          </div>
+        </a>
+      
       
         
-        <a href="../" class="md-footer__link md-footer__link--next" aria-label="下一页: 内核笔记快速查询" rel="next">
+        <a href="../../buy_someting/gh60/1_gh60_edition/" class="md-footer__link md-footer__link--next" aria-label="下一页: 0x01 GH60的各种版本" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 下一页
               </span>
-              内核笔记快速查询
+              0x01 GH60的各种版本
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1342,10 +1250,10 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.tabs", "header.autohide", "navigation.expand"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "header.autohide", "navigation.expand"], "translations": {"clipboard.copy": "\u590d\u5236", "clipboard.copied": "\u5df2\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\uff0c\\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../assets/javascripts/workers/search.477d984a.min.js", "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.82b56eb2.min.js"></script>
+      <script src="../../assets/javascripts/bundle.82b56eb2.min.js"></script>
       
     
   </body>
