@@ -68,12 +68,13 @@ nav:
         - computer\security\WEB\Practice_platform.md
         - computer\security\WEB\Linux_Privilege_Escalation.md
     - computer\security\hw_redteam.md
-  - 工具:
+  - 碎片化帮助:
     - tool\common_code.md
     - tool\tools.md
     - tool\keyboard_shortcuts.md
     - tool\vscode_shortcuts.md
     - tool\disassembly_simulation.md
+    - tool\kali_repair_network.md
   - 选购商品:
     - GH60 客制化键盘:
       - buy_someting\gh60\1_gh60_edition.md
