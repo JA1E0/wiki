@@ -13,12 +13,15 @@
 
 - Front-End<br>
   https://www.udemy.com/course/the-web-developer-bootcamp/
-
+  https://www.udacity.com/course/full-stack-javascript-developer-nanodegree--nd0067
+  https://www.udemy.com/course/typescript-full-stack-programming/
 - Modern C++ 11<br>
   https://changkun.de/modern-cpp/zh-cn/00-preface/
+  https://github.com/RayTracing/raytracing.github.io
 
 - **自己使用的安卓冰箱食物记账本** <br>
-  https://developer.android.com/
+  https://developer.android.com/<br>
+
 
 ## 常见脱壳
 ## 写壳 
