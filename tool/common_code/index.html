@@ -47,6 +47,17 @@
     
       
 
+  
+
+
+  
+
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-H95YL3C9KG"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-H95YL3C9KG",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H95YL3C9KG"></script>
+
 
     
     
@@ -1268,51 +1279,51 @@ set-executionpolicy remotesigned</p>
 <p>三者代码,调用dll中的方法几乎一致</p>
 <p>Load一般针对字符串</p>
 <p>LoadFile,LoadFrom加载程序,LoadFile加载单文件,LoadFrom会自动加载依赖的程序集.</p>
-<div class="highlight"><pre><span></span><code><span class="kt">string</span><span class="w"> </span><span class="n">assemblyAndPathName</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="s">@&quot;path&quot;</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="n">Assembly</span><span class="w"> </span><span class="n">testAsm</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Assembly</span><span class="p">.</span><span class="n">LoadFile</span><span class="p">(</span><span class="n">assemblyAndPathName</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">Type</span><span class="w"> </span><span class="n">itype</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">testAsm</span><span class="p">.</span><span class="n">GetType</span><span class="p">(</span><span class="s">&quot;assemblyName.ClassName&quot;</span><span class="p">);</span><span class="c1">//程序集名.类名</span>
-<span class="w">            </span><span class="kt">object</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Activator</span><span class="p">.</span><span class="n">CreateInstance</span><span class="p">(</span><span class="n">itype</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">MethodInfo</span><span class="w"> </span><span class="n">method1</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">itype</span><span class="p">.</span><span class="n">GetMethod</span><span class="p">(</span><span class="s">&quot;MethodName&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">method1</span><span class="p">.</span><span class="n">Invoke</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">object</span><span class="p">[]{</span><span class="w"></span>
-<span class="w">                </span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="s">&quot;b&quot;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="kt">string</span><span class="w"> </span><span class="n">assemblyAndPathName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">@&quot;path&quot;</span><span class="p">;</span>
+<span class="w">            </span><span class="n">Assembly</span><span class="w"> </span><span class="n">testAsm</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Assembly</span><span class="p">.</span><span class="n">LoadFile</span><span class="p">(</span><span class="n">assemblyAndPathName</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Type</span><span class="w"> </span><span class="n">itype</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">testAsm</span><span class="p">.</span><span class="n">GetType</span><span class="p">(</span><span class="s">&quot;assemblyName.ClassName&quot;</span><span class="p">);</span><span class="c1">//程序集名.类名</span>
+<span class="w">            </span><span class="kt">object</span><span class="w"> </span><span class="n">obj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">System</span><span class="p">.</span><span class="n">Activator</span><span class="p">.</span><span class="n">CreateInstance</span><span class="p">(</span><span class="n">itype</span><span class="p">);</span>
+<span class="w">            </span><span class="n">MethodInfo</span><span class="w"> </span><span class="n">method1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">itype</span><span class="p">.</span><span class="n">GetMethod</span><span class="p">(</span><span class="s">&quot;MethodName&quot;</span><span class="p">);</span>
+<span class="w">            </span><span class="n">method1</span><span class="p">.</span><span class="n">Invoke</span><span class="p">(</span><span class="n">obj</span><span class="p">,</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">object</span><span class="p">[]{</span>
+<span class="w">                </span><span class="s">&quot;a&quot;</span><span class="p">,</span><span class="s">&quot;b&quot;</span>
 <span class="w">            </span><span class="p">});</span><span class="c1">//参数.</span>
 </code></pre></div>
 <h2 id="16guid">根据16进制字符串计算GUID<a class="headerlink" href="#16guid" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="k">using</span><span class="w"> </span><span class="nn">System</span><span class="p">;</span>
 
-<span class="k">namespace</span><span class="w"> </span><span class="nn">ConsoleApp3</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
+<span class="k">namespace</span><span class="w"> </span><span class="nn">ConsoleApp3</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="k">class</span><span class="w"> </span><span class="nc">Program</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="k">static</span><span class="w"> </span><span class="k">void</span><span class="w"> </span><span class="nf">Main</span><span class="p">()</span>
+<span class="w">        </span><span class="p">{</span>
 <span class="w">            </span><span class="c1">// https://stackoverflow.com/questions/56638890/c-sharp-convert-active-directory-hexadecimal-to-guid</span>
-<span class="w">            </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">bytearray</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">StringToByteArray</span><span class="p">(</span><span class="s">&quot;11F890453A1DD011891F00AA004B2E24&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">bytearray</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StringToByteArray</span><span class="p">(</span><span class="s">&quot;11F890453A1DD011891F00AA004B2E24&quot;</span><span class="p">);</span>
 
 <span class="w">            </span><span class="c1">// https://docs.microsoft.com/en-us/dotnet/api/system.guid.tobytearray?view=netframework-4.8</span>
-<span class="w">            </span><span class="n">Guid</span><span class="w"> </span><span class="n">guid</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Guid</span><span class="p">(</span><span class="n">bytearray</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Guid: {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">guid</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">Byte</span><span class="p">[]</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">guid</span><span class="p">.</span><span class="n">ToByteArray</span><span class="p">();</span><span class="w"></span>
-<span class="w">            </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">byt</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">bytes</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;{0:X2} &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">byt</span><span class="p">);</span><span class="w"></span>
+<span class="w">            </span><span class="n">Guid</span><span class="w"> </span><span class="n">guid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Guid</span><span class="p">(</span><span class="n">bytearray</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Guid: {0}&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">guid</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Byte</span><span class="p">[]</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">guid</span><span class="p">.</span><span class="n">ToByteArray</span><span class="p">();</span>
+<span class="w">            </span><span class="k">foreach</span><span class="w"> </span><span class="p">(</span><span class="kt">var</span><span class="w"> </span><span class="n">byt</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">bytes</span><span class="p">)</span>
+<span class="w">                </span><span class="n">Console</span><span class="p">.</span><span class="n">Write</span><span class="p">(</span><span class="s">&quot;{0:X2} &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">byt</span><span class="p">);</span>
 
-<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span><span class="w"></span>
-<span class="w">            </span><span class="n">Guid</span><span class="w"> </span><span class="n">guid2</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Guid</span><span class="p">(</span><span class="n">bytes</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Guid: {0} (Same as First Guid: {1})&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">guid2</span><span class="p">,</span><span class="w"> </span><span class="n">guid2</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">guid</span><span class="p">));</span><span class="w"></span>
-<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span><span class="w"></span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">();</span>
+<span class="w">            </span><span class="n">Guid</span><span class="w"> </span><span class="n">guid2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Guid</span><span class="p">(</span><span class="n">bytes</span><span class="p">);</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">WriteLine</span><span class="p">(</span><span class="s">&quot;Guid: {0} (Same as First Guid: {1})&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">guid2</span><span class="p">,</span><span class="w"> </span><span class="n">guid2</span><span class="p">.</span><span class="n">Equals</span><span class="p">(</span><span class="n">guid</span><span class="p">));</span>
+<span class="w">            </span><span class="n">Console</span><span class="p">.</span><span class="n">ReadLine</span><span class="p">();</span>
 
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="p">}</span>
 
-<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="nf">StringToByteArray</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">hex</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">NumberChars</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">hex</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="n">NumberChars</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="m">2</span><span class="p">];</span><span class="w"></span>
-<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">&lt;</span><span class="w"> </span><span class="n">NumberChars</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="p">+=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="n">bytes</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="p">/</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="p">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToByte</span><span class="p">(</span><span class="n">hex</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="m">16</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">bytes</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="k">public</span><span class="w"> </span><span class="k">static</span><span class="w"> </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="nf">StringToByteArray</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">hex</span><span class="p">)</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">NumberChars</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">hex</span><span class="p">.</span><span class="n">Length</span><span class="p">;</span>
+<span class="w">            </span><span class="kt">byte</span><span class="p">[]</span><span class="w"> </span><span class="n">bytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">byte</span><span class="p">[</span><span class="n">NumberChars</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span><span class="p">];</span>
+<span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">NumberChars</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<span class="w">                </span><span class="n">bytes</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="m">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Convert</span><span class="p">.</span><span class="n">ToByte</span><span class="p">(</span><span class="n">hex</span><span class="p">.</span><span class="n">Substring</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="m">2</span><span class="p">),</span><span class="w"> </span><span class="m">16</span><span class="p">);</span>
+<span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">bytes</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 </code></pre></div>
 <h2 id="_3">递归下载网页文件<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <p>wget -c -r -p -k -np url</p>

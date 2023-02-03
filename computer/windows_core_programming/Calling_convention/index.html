@@ -47,6 +47,17 @@
     
       
 
+  
+
+
+  
+
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-H95YL3C9KG"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-H95YL3C9KG",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H95YL3C9KG"></script>
+
 
     
     
@@ -1232,62 +1243,62 @@
 <p><strong>不定值参数函数，最少也要分配0x20字节的栈。例printf,system;</strong></p>
 <p>示例如下：开启/RTCS，和全程序优化/GL 
 <div class="highlight"><pre><span></span><code><span class="c1">// main.cpp</span>
-<span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="cpf">&lt;Windows.h&gt;</span><span class="cp"></span>
-<span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">asm_func</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">ULONG</span><span class="w"> </span><span class="n">a1</span><span class="p">,</span><span class="w">  </span><span class="n">ULONG</span><span class="w"> </span><span class="n">a2</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">a3</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">a4</span><span class="p">,</span><span class="n">ULONG</span><span class="w"> </span><span class="n">a5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a1</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a2</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a3</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a4</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
-<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">asm_func</span><span class="p">();</span><span class="w"></span>
-<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="cp">#include</span><span class="cpf">&lt;cstdio&gt;</span>
+<span class="cp">#include</span><span class="cpf">&lt;stdlib.h&gt;</span>
+<span class="cp">#include</span><span class="cpf">&lt;Windows.h&gt;</span>
+<span class="k">extern</span><span class="w"> </span><span class="s">&quot;C&quot;</span><span class="p">{</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">asm_func</span><span class="p">();</span>
+<span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">func</span><span class="p">(</span><span class="n">ULONG</span><span class="w"> </span><span class="n">a1</span><span class="p">,</span><span class="w">  </span><span class="n">ULONG</span><span class="w"> </span><span class="n">a2</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">a3</span><span class="p">,</span><span class="w"> </span><span class="n">ULONG</span><span class="w"> </span><span class="n">a4</span><span class="p">,</span><span class="n">ULONG</span><span class="w"> </span><span class="n">a5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a1</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a2</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a3</span><span class="p">);</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;a1: %p</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a4</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
+<span class="kt">int</span><span class="w"> </span><span class="n">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="kt">char</span><span class="o">**</span><span class="w"> </span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">asm_func</span><span class="p">();</span>
+<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div></p>
 <div class="highlight"><pre><span></span><code><span class="c1">// x64asm.asm</span>
-<span class="p">;</span><span class="n">大小写敏感</span><span class="w"></span>
-<span class="n">option</span><span class="w"> </span><span class="n">casemap</span><span class="o">:</span><span class="n">none</span><span class="w"></span>
+<span class="p">;</span><span class="n">大小写敏感</span>
+<span class="n">option</span><span class="w"> </span><span class="n">casemap</span><span class="o">:</span><span class="n">none</span>
 
-<span class="p">;</span><span class="n">main</span><span class="w"> </span><span class="n">Proto</span><span class="w"></span>
+<span class="p">;</span><span class="n">main</span><span class="w"> </span><span class="n">Proto</span>
 
-<span class="n">func</span><span class="w"> </span><span class="n">Proto</span><span class="w"></span>
-<span class="n">printf</span><span class="w"> </span><span class="n">Proto</span><span class="w"></span>
-<span class="p">.</span><span class="n">data</span><span class="w"></span>
-<span class="p">;</span><span class="n">ttt</span><span class="w"> </span><span class="n">qword</span><span class="w"> </span><span class="o">?</span><span class="w"></span>
-<span class="n">pStr</span><span class="w"> </span><span class="n">DB</span><span class="w"> </span><span class="err">&#39;</span><span class="n">this</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">asm_func</span><span class="err">&#39;</span><span class="p">,</span><span class="mi">0</span><span class="n">Ah</span><span class="p">,</span><span class="mo">00</span><span class="n">h</span><span class="w"></span>
-<span class="p">.</span><span class="n">code</span><span class="w"></span>
+<span class="n">func</span><span class="w"> </span><span class="n">Proto</span>
+<span class="n">printf</span><span class="w"> </span><span class="n">Proto</span>
+<span class="p">.</span><span class="n">data</span>
+<span class="p">;</span><span class="n">ttt</span><span class="w"> </span><span class="n">qword</span><span class="w"> </span><span class="o">?</span>
+<span class="n">pStr</span><span class="w"> </span><span class="n">DB</span><span class="w"> </span><span class="err">&#39;</span><span class="n">this</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">asm_func</span><span class="err">&#39;</span><span class="p">,</span><span class="mi">0</span><span class="n">Ah</span><span class="p">,</span><span class="mo">00</span><span class="n">h</span>
+<span class="p">.</span><span class="n">code</span>
 
-<span class="n">asm_func</span><span class="w"> </span><span class="n">Proc</span><span class="w"></span>
-<span class="w">    </span><span class="n">push</span><span class="w"> </span><span class="n">rdi</span><span class="w"></span>
-<span class="w">    </span><span class="n">sub</span><span class="w"> </span><span class="n">rsp</span><span class="p">,</span><span class="mi">30</span><span class="n">h</span><span class="w"></span>
-<span class="w">    </span><span class="n">lea</span><span class="w"> </span><span class="n">rcx</span><span class="p">,[</span><span class="n">pStr</span><span class="p">]</span><span class="w"></span>
+<span class="n">asm_func</span><span class="w"> </span><span class="n">Proc</span>
+<span class="w">    </span><span class="n">push</span><span class="w"> </span><span class="n">rdi</span>
+<span class="w">    </span><span class="n">sub</span><span class="w"> </span><span class="n">rsp</span><span class="p">,</span><span class="mi">30</span><span class="n">h</span>
+<span class="w">    </span><span class="n">lea</span><span class="w"> </span><span class="n">rcx</span><span class="p">,[</span><span class="n">pStr</span><span class="p">]</span>
 <span class="w">    </span><span class="n">call</span><span class="w"> </span><span class="n">printf</span><span class="w"> </span>
-<span class="w">    </span><span class="p">;</span><span class="n">add</span><span class="w"> </span><span class="n">rsp</span><span class="p">,</span><span class="mi">20</span><span class="n">h</span><span class="w"></span>
+<span class="w">    </span><span class="p">;</span><span class="n">add</span><span class="w"> </span><span class="n">rsp</span><span class="p">,</span><span class="mi">20</span><span class="n">h</span>
 
-<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">rdi</span><span class="p">,</span><span class="mi">1</span><span class="w"></span>
-<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">rcx</span><span class="p">,</span><span class="n">rdi</span><span class="w"></span>
-<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">rcx</span><span class="p">,</span><span class="mi">1</span><span class="w"></span>
-<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">rdx</span><span class="p">,</span><span class="mi">2</span><span class="w"></span>
-<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">r8</span><span class="p">,</span><span class="mi">3</span><span class="w"></span>
-<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">r9</span><span class="p">,</span><span class="mi">4</span><span class="w"></span>
+<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">rdi</span><span class="p">,</span><span class="mi">1</span>
+<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">rcx</span><span class="p">,</span><span class="n">rdi</span>
+<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">rcx</span><span class="p">,</span><span class="mi">1</span>
+<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">rdx</span><span class="p">,</span><span class="mi">2</span>
+<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">r8</span><span class="p">,</span><span class="mi">3</span>
+<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">r9</span><span class="p">,</span><span class="mi">4</span>
 
-<span class="w">    </span><span class="p">;</span><span class="n">sub</span><span class="w"> </span><span class="n">rsp</span><span class="p">,</span><span class="mi">28</span><span class="n">h</span><span class="w"></span>
-<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">qword</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="p">[</span><span class="n">rsp</span><span class="o">+</span><span class="mi">20</span><span class="n">h</span><span class="p">],</span><span class="mi">5</span><span class="w"></span>
+<span class="w">    </span><span class="p">;</span><span class="n">sub</span><span class="w"> </span><span class="n">rsp</span><span class="p">,</span><span class="mi">28</span><span class="n">h</span>
+<span class="w">    </span><span class="n">mov</span><span class="w"> </span><span class="n">qword</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="p">[</span><span class="n">rsp</span><span class="o">+</span><span class="mi">20</span><span class="n">h</span><span class="p">],</span><span class="mi">5</span>
 
-<span class="w">    </span><span class="n">call</span><span class="w"> </span><span class="n">func</span><span class="w"></span>
-<span class="w">    </span><span class="p">;</span><span class="n">add</span><span class="w"> </span><span class="n">rsp</span><span class="p">,</span><span class="mi">28</span><span class="n">h</span><span class="w"></span>
-<span class="w">    </span><span class="n">lea</span><span class="w"> </span><span class="n">rsp</span><span class="p">,</span><span class="n">qword</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="p">[</span><span class="n">rsp</span><span class="o">+</span><span class="mi">30</span><span class="n">h</span><span class="p">]</span><span class="w"></span>
-<span class="w">    </span><span class="n">pop</span><span class="w"> </span><span class="n">rdi</span><span class="w"></span>
-<span class="w">    </span><span class="n">ret</span><span class="w"></span>
-<span class="n">asm_func</span><span class="w"> </span><span class="n">Endp</span><span class="w"></span>
+<span class="w">    </span><span class="n">call</span><span class="w"> </span><span class="n">func</span>
+<span class="w">    </span><span class="p">;</span><span class="n">add</span><span class="w"> </span><span class="n">rsp</span><span class="p">,</span><span class="mi">28</span><span class="n">h</span>
+<span class="w">    </span><span class="n">lea</span><span class="w"> </span><span class="n">rsp</span><span class="p">,</span><span class="n">qword</span><span class="w"> </span><span class="n">ptr</span><span class="w"> </span><span class="p">[</span><span class="n">rsp</span><span class="o">+</span><span class="mi">30</span><span class="n">h</span><span class="p">]</span>
+<span class="w">    </span><span class="n">pop</span><span class="w"> </span><span class="n">rdi</span>
+<span class="w">    </span><span class="n">ret</span>
+<span class="n">asm_func</span><span class="w"> </span><span class="n">Endp</span>
 
-<span class="n">END</span><span class="w"></span>
+<span class="n">END</span>
 </code></pre></div>
 <p>断点在call func的栈帧分析如下：
 <div class="highlight"><pre><span></span><code>$ r ==&gt;   arg1      ;a1

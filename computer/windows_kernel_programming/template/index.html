@@ -47,6 +47,17 @@
     
       
 
+  
+
+
+  
+
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-H95YL3C9KG"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-H95YL3C9KG",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H95YL3C9KG"></script>
+
 
     
     
@@ -1191,29 +1202,29 @@
                   <h1>内核基础模板</h1>
                 
                 <h2 id="_1">驱动基础模板<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ntifs.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windef.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ntifs.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windef.h&gt;</span>
 
-<span class="n">VOID</span><span class="w"> </span><span class="nf">DriverUnload</span><span class="p">(</span><span class="n">PDRIVER_OBJECT</span><span class="w"> </span><span class="n">pDriverObj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">UNICODE_STRING</span><span class="w"> </span><span class="n">strLink</span><span class="p">;</span><span class="w"></span>
+<span class="n">VOID</span><span class="w"> </span><span class="nf">DriverUnload</span><span class="p">(</span><span class="n">PDRIVER_OBJECT</span><span class="w"> </span><span class="n">pDriverObj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">UNICODE_STRING</span><span class="w"> </span><span class="n">strLink</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">//do sth...</span>
-<span class="w">    </span><span class="n">DbgPrint</span><span class="p">(</span><span class="s">&quot;[DriverUnload]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">DbgPrint</span><span class="p">(</span><span class="s">&quot;[DriverUnload]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="n">NTSTATUS</span><span class="w"> </span><span class="nf">DriverEntry</span><span class="p">(</span><span class="n">PDRIVER_OBJECT</span><span class="w"> </span><span class="n">pDriverObj</span><span class="p">,</span><span class="w"> </span><span class="n">PUNICODE_STRING</span><span class="w"> </span><span class="n">pRegistryString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">NTSTATUS</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span><span class="w"></span>
+<span class="n">NTSTATUS</span><span class="w"> </span><span class="nf">DriverEntry</span><span class="p">(</span><span class="n">PDRIVER_OBJECT</span><span class="w"> </span><span class="n">pDriverObj</span><span class="p">,</span><span class="w"> </span><span class="n">PUNICODE_STRING</span><span class="w"> </span><span class="n">pRegistryString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NTSTATUS</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">//do sth...</span>
-<span class="w">    </span><span class="n">DbgPrint</span><span class="p">(</span><span class="s">&quot;[DriverEntry]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">status</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">DbgPrint</span><span class="p">(</span><span class="s">&quot;[DriverEntry]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">status</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 <h2 id="irp">驱动带IRP模板<a class="headerlink" href="#irp" title="Permanent link">&para;</a></h2>
 <div class="highlight"><pre><span></span><code><span class="c1">//工程：WDM驱动模板</span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ntifs.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windef.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ntimage.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ntifs.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdlib.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;windef.h&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;ntimage.h&gt;</span>
 
 <span class="c1">//symbolicLinkName  L&quot;\\DosDevices\\SymbolicLinkName&quot;</span>
 <span class="cp">#define SYM_NAME    L&quot;\\??\\MyFirstSYM&quot;</span>
@@ -1222,281 +1233,281 @@
 
 <span class="cp">#define IOCTL_TEST  CTL_CODE(FILE_DEVICE_UNKNOWN, 0x800, METHOD_BUFFERED, FILE_ANY_ACCESS) </span>
 
-<span class="n">NTSTATUS</span><span class="w"> </span><span class="nf">DispatchCreate</span><span class="p">(</span><span class="n">PDEVICE_OBJECT</span><span class="w"> </span><span class="n">pDevObj</span><span class="p">,</span><span class="w"> </span><span class="n">PIRP</span><span class="w"> </span><span class="n">pIrp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">IoCompleteRequest</span><span class="p">(</span><span class="n">pIrp</span><span class="p">,</span><span class="w"> </span><span class="n">IO_NO_INCREMENT</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">NTSTATUS</span><span class="w"> </span><span class="nf">DispatchCreate</span><span class="p">(</span><span class="n">PDEVICE_OBJECT</span><span class="w"> </span><span class="n">pDevObj</span><span class="p">,</span><span class="w"> </span><span class="n">PIRP</span><span class="w"> </span><span class="n">pIrp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">IoCompleteRequest</span><span class="p">(</span><span class="n">pIrp</span><span class="p">,</span><span class="w"> </span><span class="n">IO_NO_INCREMENT</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="n">NTSTATUS</span><span class="w"> </span><span class="nf">DispatchClose</span><span class="p">(</span><span class="n">PDEVICE_OBJECT</span><span class="w"> </span><span class="n">pDevObj</span><span class="p">,</span><span class="w"> </span><span class="n">PIRP</span><span class="w"> </span><span class="n">pIrp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">IoCompleteRequest</span><span class="p">(</span><span class="n">pIrp</span><span class="p">,</span><span class="w"> </span><span class="n">IO_NO_INCREMENT</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">NTSTATUS</span><span class="w"> </span><span class="nf">DispatchClose</span><span class="p">(</span><span class="n">PDEVICE_OBJECT</span><span class="w"> </span><span class="n">pDevObj</span><span class="p">,</span><span class="w"> </span><span class="n">PIRP</span><span class="w"> </span><span class="n">pIrp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">IoCompleteRequest</span><span class="p">(</span><span class="n">pIrp</span><span class="p">,</span><span class="w"> </span><span class="n">IO_NO_INCREMENT</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="n">NTSTATUS</span><span class="w"> </span><span class="nf">DispatchIoctl</span><span class="p">(</span><span class="n">PDEVICE_OBJECT</span><span class="w"> </span><span class="n">pDevObj</span><span class="p">,</span><span class="w"> </span><span class="n">PIRP</span><span class="w"> </span><span class="n">pIrp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">NTSTATUS</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_INVALID_DEVICE_REQUEST</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">PIO_STACK_LOCATION</span><span class="w"> </span><span class="n">pIrpStack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IoGetCurrentIrpStackLocation</span><span class="p">(</span><span class="n">pIrp</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">ULONG</span><span class="w"> </span><span class="n">uIoControlCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pIrpStack</span><span class="o">-&gt;</span><span class="n">Parameters</span><span class="p">.</span><span class="n">DeviceIoControl</span><span class="p">.</span><span class="n">IoControlCode</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">PVOID</span><span class="w"> </span><span class="n">pIoBuffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">AssociatedIrp</span><span class="p">.</span><span class="n">SystemBuffer</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">ULONG</span><span class="w"> </span><span class="n">uInSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pIrpStack</span><span class="o">-&gt;</span><span class="n">Parameters</span><span class="p">.</span><span class="n">DeviceIoControl</span><span class="p">.</span><span class="n">InputBufferLength</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">ULONG</span><span class="w"> </span><span class="n">uOutSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pIrpStack</span><span class="o">-&gt;</span><span class="n">Parameters</span><span class="p">.</span><span class="n">DeviceIoControl</span><span class="p">.</span><span class="n">OutputBufferLength</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">uIoControlCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="nl">IOCTL_TEST</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">DbgPrint</span><span class="p">(</span><span class="s">&quot;[IOCTL_TEST]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dw</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">dw</span><span class="p">,</span><span class="w"> </span><span class="n">pIoBuffer</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">dw</span><span class="p">));</span><span class="w"></span>
-<span class="w">        </span><span class="n">dw</span><span class="o">++</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">pIoBuffer</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dw</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">dw</span><span class="p">));</span><span class="w"></span>
-<span class="w">        </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uOutSize</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="w"></span>
-<span class="w">        </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">status</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">IoCompleteRequest</span><span class="p">(</span><span class="n">pIrp</span><span class="p">,</span><span class="w"> </span><span class="n">IO_NO_INCREMENT</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">status</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">NTSTATUS</span><span class="w"> </span><span class="nf">DispatchIoctl</span><span class="p">(</span><span class="n">PDEVICE_OBJECT</span><span class="w"> </span><span class="n">pDevObj</span><span class="p">,</span><span class="w"> </span><span class="n">PIRP</span><span class="w"> </span><span class="n">pIrp</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NTSTATUS</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_INVALID_DEVICE_REQUEST</span><span class="p">;</span>
+<span class="w">    </span><span class="n">PIO_STACK_LOCATION</span><span class="w"> </span><span class="n">pIrpStack</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IoGetCurrentIrpStackLocation</span><span class="p">(</span><span class="n">pIrp</span><span class="p">);</span>
+<span class="w">    </span><span class="n">ULONG</span><span class="w"> </span><span class="n">uIoControlCode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pIrpStack</span><span class="o">-&gt;</span><span class="n">Parameters</span><span class="p">.</span><span class="n">DeviceIoControl</span><span class="p">.</span><span class="n">IoControlCode</span><span class="p">;</span>
+<span class="w">    </span><span class="n">PVOID</span><span class="w"> </span><span class="n">pIoBuffer</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">AssociatedIrp</span><span class="p">.</span><span class="n">SystemBuffer</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ULONG</span><span class="w"> </span><span class="n">uInSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pIrpStack</span><span class="o">-&gt;</span><span class="n">Parameters</span><span class="p">.</span><span class="n">DeviceIoControl</span><span class="p">.</span><span class="n">InputBufferLength</span><span class="p">;</span>
+<span class="w">    </span><span class="n">ULONG</span><span class="w"> </span><span class="n">uOutSize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pIrpStack</span><span class="o">-&gt;</span><span class="n">Parameters</span><span class="p">.</span><span class="n">DeviceIoControl</span><span class="p">.</span><span class="n">OutputBufferLength</span><span class="p">;</span>
+<span class="w">    </span><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">uIoControlCode</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="no">IOCTL_TEST</span><span class="p">:</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">DbgPrint</span><span class="p">(</span><span class="s">&quot;[IOCTL_TEST]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dw</span><span class="p">;</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="o">&amp;</span><span class="n">dw</span><span class="p">,</span><span class="w"> </span><span class="n">pIoBuffer</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">dw</span><span class="p">));</span>
+<span class="w">        </span><span class="n">dw</span><span class="o">++</span><span class="p">;</span>
+<span class="w">        </span><span class="n">memcpy</span><span class="p">(</span><span class="n">pIoBuffer</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dw</span><span class="p">,</span><span class="w"> </span><span class="k">sizeof</span><span class="p">(</span><span class="n">dw</span><span class="p">));</span>
+<span class="w">        </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">status</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">)</span>
+<span class="w">        </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">uOutSize</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span>
+<span class="w">        </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Information</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pIrp</span><span class="o">-&gt;</span><span class="n">IoStatus</span><span class="p">.</span><span class="n">Status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">status</span><span class="p">;</span>
+<span class="w">    </span><span class="n">IoCompleteRequest</span><span class="p">(</span><span class="n">pIrp</span><span class="p">,</span><span class="w"> </span><span class="n">IO_NO_INCREMENT</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">status</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="n">VOID</span><span class="w"> </span><span class="nf">DriverUnload</span><span class="p">(</span><span class="n">PDRIVER_OBJECT</span><span class="w"> </span><span class="n">pDriverObj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">UNICODE_STRING</span><span class="w"> </span><span class="n">strLink</span><span class="p">;</span><span class="w"></span>
+<span class="n">VOID</span><span class="w"> </span><span class="nf">DriverUnload</span><span class="p">(</span><span class="n">PDRIVER_OBJECT</span><span class="w"> </span><span class="n">pDriverObj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">UNICODE_STRING</span><span class="w"> </span><span class="n">strLink</span><span class="p">;</span>
 <span class="w">    </span><span class="c1">//do sth...</span>
-<span class="w">    </span><span class="n">DbgPrint</span><span class="p">(</span><span class="s">&quot;[DriverUnload]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">DbgPrint</span><span class="p">(</span><span class="s">&quot;[DriverUnload]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="c1">//delete device and symbolic link</span>
-<span class="w">    </span><span class="n">RtlInitUnicodeString</span><span class="p">(</span><span class="o">&amp;</span><span class="n">strLink</span><span class="p">,</span><span class="w"> </span><span class="n">SYM_NAME</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">IoDeleteSymbolicLink</span><span class="p">(</span><span class="o">&amp;</span><span class="n">strLink</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">IoDeleteDevice</span><span class="p">(</span><span class="n">pDriverObj</span><span class="o">-&gt;</span><span class="n">DeviceObject</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">RtlInitUnicodeString</span><span class="p">(</span><span class="o">&amp;</span><span class="n">strLink</span><span class="p">,</span><span class="w"> </span><span class="n">SYM_NAME</span><span class="p">);</span>
+<span class="w">    </span><span class="n">IoDeleteSymbolicLink</span><span class="p">(</span><span class="o">&amp;</span><span class="n">strLink</span><span class="p">);</span>
+<span class="w">    </span><span class="n">IoDeleteDevice</span><span class="p">(</span><span class="n">pDriverObj</span><span class="o">-&gt;</span><span class="n">DeviceObject</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="n">NTSTATUS</span><span class="w"> </span><span class="nf">DriverEntry</span><span class="p">(</span><span class="n">PDRIVER_OBJECT</span><span class="w"> </span><span class="n">pDriverObj</span><span class="p">,</span><span class="w"> </span><span class="n">PUNICODE_STRING</span><span class="w"> </span><span class="n">pRegistryString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">NTSTATUS</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">PDEVICE_OBJECT</span><span class="w"> </span><span class="n">pDevObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">UNICODE_STRING</span><span class="w"> </span><span class="n">ustrDeviceName</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">UNICODE_STRING</span><span class="w"> </span><span class="n">ustrLinkName</span><span class="p">;</span><span class="w"></span>
+<span class="n">NTSTATUS</span><span class="w"> </span><span class="nf">DriverEntry</span><span class="p">(</span><span class="n">PDRIVER_OBJECT</span><span class="w"> </span><span class="n">pDriverObj</span><span class="p">,</span><span class="w"> </span><span class="n">PUNICODE_STRING</span><span class="w"> </span><span class="n">pRegistryString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">NTSTATUS</span><span class="w"> </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">STATUS_SUCCESS</span><span class="p">;</span>
+<span class="w">    </span><span class="n">PDEVICE_OBJECT</span><span class="w"> </span><span class="n">pDevObj</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="n">UNICODE_STRING</span><span class="w"> </span><span class="n">ustrDeviceName</span><span class="p">;</span>
+<span class="w">    </span><span class="n">UNICODE_STRING</span><span class="w"> </span><span class="n">ustrLinkName</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">//set dispatch functions</span>
-<span class="w">    </span><span class="n">pDriverObj</span><span class="o">-&gt;</span><span class="n">DriverUnload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverUnload</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">pDriverObj</span><span class="o">-&gt;</span><span class="n">MajorFunction</span><span class="p">[</span><span class="n">IRP_MJ_DEVICE_CONTROL</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DispatchIoctl</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">pDriverObj</span><span class="o">-&gt;</span><span class="n">MajorFunction</span><span class="p">[</span><span class="n">IRP_MJ_CREATE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DispatchCreate</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">pDriverObj</span><span class="o">-&gt;</span><span class="n">MajorFunction</span><span class="p">[</span><span class="n">IRP_MJ_CLOSE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DispatchClose</span><span class="p">;</span><span class="w"></span>
+<span class="w">    </span><span class="n">pDriverObj</span><span class="o">-&gt;</span><span class="n">DriverUnload</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverUnload</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pDriverObj</span><span class="o">-&gt;</span><span class="n">MajorFunction</span><span class="p">[</span><span class="n">IRP_MJ_DEVICE_CONTROL</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DispatchIoctl</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pDriverObj</span><span class="o">-&gt;</span><span class="n">MajorFunction</span><span class="p">[</span><span class="n">IRP_MJ_CREATE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DispatchCreate</span><span class="p">;</span>
+<span class="w">    </span><span class="n">pDriverObj</span><span class="o">-&gt;</span><span class="n">MajorFunction</span><span class="p">[</span><span class="n">IRP_MJ_CLOSE</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DispatchClose</span><span class="p">;</span>
 
 <span class="w">    </span><span class="c1">//create device</span>
-<span class="w">    </span><span class="n">RtlInitUnicodeString</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ustrDeviceName</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_NAME</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IoCreateDevice</span><span class="p">(</span><span class="n">pDriverObj</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ustrDeviceName</span><span class="p">,</span><span class="w"> </span><span class="n">FILE_DEVICE_UNKNOWN</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">FALSE</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pDevObj</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">NT_SUCCESS</span><span class="p">(</span><span class="n">status</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">status</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">RtlInitUnicodeString</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ustrDeviceName</span><span class="p">,</span><span class="w"> </span><span class="n">DEVICE_NAME</span><span class="p">);</span>
+<span class="w">    </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IoCreateDevice</span><span class="p">(</span><span class="n">pDriverObj</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ustrDeviceName</span><span class="p">,</span><span class="w"> </span><span class="n">FILE_DEVICE_UNKNOWN</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">FALSE</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">pDevObj</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">NT_SUCCESS</span><span class="p">(</span><span class="n">status</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">status</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">//create symbolic link</span>
-<span class="w">    </span><span class="n">RtlInitUnicodeString</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ustrLinkName</span><span class="p">,</span><span class="w"> </span><span class="n">SYM_NAME</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IoCreateSymbolicLink</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ustrLinkName</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ustrDeviceName</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">NT_SUCCESS</span><span class="p">(</span><span class="n">status</span><span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">IoDeleteDevice</span><span class="p">(</span><span class="n">pDevObj</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">status</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">RtlInitUnicodeString</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ustrLinkName</span><span class="p">,</span><span class="w"> </span><span class="n">SYM_NAME</span><span class="p">);</span>
+<span class="w">    </span><span class="n">status</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">IoCreateSymbolicLink</span><span class="p">(</span><span class="o">&amp;</span><span class="n">ustrLinkName</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ustrDeviceName</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">NT_SUCCESS</span><span class="p">(</span><span class="n">status</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">IoDeleteDevice</span><span class="p">(</span><span class="n">pDevObj</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">status</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
 <span class="w">    </span><span class="c1">//do sth...</span>
-<span class="w">    </span><span class="n">DbgPrint</span><span class="p">(</span><span class="s">&quot;[DriverEntry]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">status</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">DbgPrint</span><span class="p">(</span><span class="s">&quot;[DriverEntry]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">status</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 <h2 id="r3-io">R3 IO调用模板<a class="headerlink" href="#r3-io" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Windows.h&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="cpf">&lt;winioctl.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Windows.h&gt;</span>
+<span class="cp">#include</span><span class="cpf">&lt;winioctl.h&gt;</span>
 
 <span class="c1">//#define LINK_NAME L&quot;\\DosDevices\\Global\\MyDriverLinkName&quot;</span>
 <span class="cp">#define DEVICE_NAME L&quot;\\\\.\\MyFirstSYM&quot;</span>
 <span class="cp">#define IOCTL_TEST  CTL_CODE(FILE_DEVICE_UNKNOWN, 0x800, METHOD_BUFFERED, FILE_ANY_ACCESS) </span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">HANDLE</span><span class="w"> </span><span class="n">hDevice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">hDevice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateFile</span><span class="p">(</span><span class="n">DEVICE_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">GENERIC_READ</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">GENERIC_WRITE</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">OPEN_EXISTING</span><span class="p">,</span><span class="w"> </span><span class="n">FILE_ATTRIBUTE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hDevice</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">INVALID_HANDLE_VALUE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[Open Device Failed]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">HANDLE</span><span class="w"> </span><span class="n">hDevice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">NULL</span><span class="p">;</span>
+<span class="w">    </span><span class="n">hDevice</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateFile</span><span class="p">(</span><span class="n">DEVICE_NAME</span><span class="p">,</span><span class="w"> </span><span class="n">GENERIC_READ</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">GENERIC_WRITE</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">OPEN_EXISTING</span><span class="p">,</span><span class="w"> </span><span class="n">FILE_ATTRIBUTE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">hDevice</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">INVALID_HANDLE_VALUE</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[Open Device Failed]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[Open Success]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[Open Success]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
 
-<span class="w">    </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dwIn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dwOut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dwReturn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">DeviceIoControl</span><span class="p">(</span><span class="n">hDevice</span><span class="p">,</span><span class="w"> </span><span class="n">IOCTL_TEST</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dwIn</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dwOut</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dwReturn</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dwReturn</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[In %d</span><span class="se">\t</span><span class="s">Out %d</span><span class="se">\t</span><span class="s">info %d</span><span class="se">\n</span><span class="s">]&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dwIn</span><span class="p">,</span><span class="w"> </span><span class="n">dwOut</span><span class="p">,</span><span class="w"> </span><span class="n">dwReturn</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[IOCTL_TEST Failed]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dwIn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dwOut</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dwReturn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">DeviceIoControl</span><span class="p">(</span><span class="n">hDevice</span><span class="p">,</span><span class="w"> </span><span class="n">IOCTL_TEST</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dwIn</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dwOut</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dwReturn</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">dwReturn</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[In %d</span><span class="se">\t</span><span class="s">Out %d</span><span class="se">\t</span><span class="s">info %d</span><span class="se">\n</span><span class="s">]&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">dwIn</span><span class="p">,</span><span class="w"> </span><span class="n">dwOut</span><span class="p">,</span><span class="w"> </span><span class="n">dwReturn</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;[IOCTL_TEST Failed]</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
 
-<span class="w">    </span><span class="n">CloseHandle</span><span class="p">(</span><span class="n">hDevice</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">CloseHandle</span><span class="p">(</span><span class="n">hDevice</span><span class="p">);</span>
+<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
 </code></pre></div>
 <h2 id="_2">驱动加载模板<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><a href="http://www.m5home.com/bbs/thread-8602-1-1.html">http://www.m5home.com/bbs/thread-8602-1-1.html</a></p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span><span class="cp"></span>
-<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Windows.h&gt;</span><span class="cp"></span>
+<div class="highlight"><pre><span></span><code><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;iostream&gt;</span>
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;Windows.h&gt;</span>
 
 <span class="cp">#pragma comment(lib,&quot;advapi32.lib&quot;) </span><span class="c1">//Finishing by GFW@vbasm.com</span>
 
-<span class="n">SC_HANDLE</span><span class="w"> </span><span class="nf">InstallDriver</span><span class="p">(</span><span class="n">PCHAR</span><span class="w"> </span><span class="n">m_pSysPath</span><span class="p">,</span><span class="w"> </span><span class="n">PCHAR</span><span class="w"> </span><span class="n">m_pServiceName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">PCHAR</span><span class="w"> </span><span class="n">m_pDisplayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_pServiceName</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hSCManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpenSCManagerA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">SC_MANAGER_ALL_ACCESS</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m_hSCManager</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateServiceA</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="n">m_pServiceName</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="n">m_pDisplayName</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="n">SERVICE_ALL_ACCESS</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="n">SERVICE_KERNEL_DRIVER</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="n">SERVICE_DEMAND_START</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="n">SERVICE_ERROR_NORMAL</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="n">m_pSysPath</span><span class="p">,</span><span class="w"></span>
-<span class="w">        </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m_hService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ERROR_SERVICE_EXISTS</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">GetLastError</span><span class="p">())</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">m_hService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpenServiceA</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">,</span><span class="w"> </span><span class="n">m_pServiceName</span><span class="p">,</span><span class="w"> </span><span class="n">SERVICE_ALL_ACCESS</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">CloseServiceHandle</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">m_hService</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">SC_HANDLE</span><span class="w"> </span><span class="nf">InstallDriver</span><span class="p">(</span><span class="n">PCHAR</span><span class="w"> </span><span class="n">m_pSysPath</span><span class="p">,</span><span class="w"> </span><span class="n">PCHAR</span><span class="w"> </span><span class="n">m_pServiceName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">PCHAR</span><span class="w"> </span><span class="n">m_pDisplayName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">m_pServiceName</span><span class="p">;</span>
+<span class="w">    </span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hSCManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpenSCManagerA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">SC_MANAGER_ALL_ACCESS</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m_hSCManager</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateServiceA</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">,</span>
+<span class="w">        </span><span class="n">m_pServiceName</span><span class="p">,</span>
+<span class="w">        </span><span class="n">m_pDisplayName</span><span class="p">,</span>
+<span class="w">        </span><span class="n">SERVICE_ALL_ACCESS</span><span class="p">,</span>
+<span class="w">        </span><span class="n">SERVICE_KERNEL_DRIVER</span><span class="p">,</span>
+<span class="w">        </span><span class="n">SERVICE_DEMAND_START</span><span class="p">,</span>
+<span class="w">        </span><span class="n">SERVICE_ERROR_NORMAL</span><span class="p">,</span>
+<span class="w">        </span><span class="n">m_pSysPath</span><span class="p">,</span>
+<span class="w">        </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m_hService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">ERROR_SERVICE_EXISTS</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">GetLastError</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">m_hService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpenServiceA</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">,</span><span class="w"> </span><span class="n">m_pServiceName</span><span class="p">,</span><span class="w"> </span><span class="n">SERVICE_ALL_ACCESS</span><span class="p">);</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">CloseServiceHandle</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">m_hService</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="n">BOOL</span><span class="w"> </span><span class="nf">StartDriver</span><span class="p">(</span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">StartServiceA</span><span class="p">(</span><span class="n">m_hService</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">BOOL</span><span class="w"> </span><span class="nf">StartDriver</span><span class="p">(</span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">StartServiceA</span><span class="p">(</span><span class="n">m_hService</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="n">BOOL</span><span class="w"> </span><span class="nf">StopDriver</span><span class="p">(</span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">SERVICE_STATUS</span><span class="w"> </span><span class="n">ss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ControlService</span><span class="p">(</span><span class="n">m_hService</span><span class="p">,</span><span class="w"> </span><span class="n">SERVICE_CONTROL_STOP</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ss</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">BOOL</span><span class="w"> </span><span class="nf">StopDriver</span><span class="p">(</span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">SERVICE_STATUS</span><span class="w"> </span><span class="n">ss</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">ControlService</span><span class="p">(</span><span class="n">m_hService</span><span class="p">,</span><span class="w"> </span><span class="n">SERVICE_CONTROL_STOP</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">ss</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="n">BOOL</span><span class="w"> </span><span class="nf">RemoveDriver</span><span class="p">(</span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DeleteService</span><span class="p">(</span><span class="n">m_hService</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">BOOL</span><span class="w"> </span><span class="nf">RemoveDriver</span><span class="p">(</span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">DeleteService</span><span class="p">(</span><span class="n">m_hService</span><span class="p">);</span>
+<span class="p">}</span>
 
-<span class="n">HANDLE</span><span class="w"> </span><span class="nf">OpenDriver</span><span class="p">(</span><span class="n">PCHAR</span><span class="w"> </span><span class="n">pLinkName</span><span class="p">)</span><span class="cm">/* \\\\.\\test */</span><span class="w"></span>
-<span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">HANDLE</span><span class="w"> </span><span class="n">m_hDriver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateFileA</span><span class="p">(</span><span class="n">pLinkName</span><span class="p">,</span><span class="w"> </span><span class="n">GENERIC_READ</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">GENERIC_WRITE</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">OPEN_EXISTING</span><span class="p">,</span><span class="w"> </span><span class="n">FILE_ATTRIBUTE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m_hDriver</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">INVALID_HANDLE_VALUE</span><span class="p">)</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">m_hDriver</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;OpenDriver Sym Failed!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">HANDLE</span><span class="w"> </span><span class="nf">OpenDriver</span><span class="p">(</span><span class="n">PCHAR</span><span class="w"> </span><span class="n">pLinkName</span><span class="p">)</span><span class="cm">/* \\\\.\\test */</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">HANDLE</span><span class="w"> </span><span class="n">m_hDriver</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CreateFileA</span><span class="p">(</span><span class="n">pLinkName</span><span class="p">,</span><span class="w"> </span><span class="n">GENERIC_READ</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">GENERIC_WRITE</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">OPEN_EXISTING</span><span class="p">,</span><span class="w"> </span><span class="n">FILE_ATTRIBUTE_NORMAL</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">m_hDriver</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">INVALID_HANDLE_VALUE</span><span class="p">)</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">m_hDriver</span><span class="p">;</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;OpenDriver Sym Failed!&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="n">BOOL</span><span class="w"> </span><span class="nf">CloseDriver</span><span class="p">(</span><span class="n">HANDLE</span><span class="w"> </span><span class="n">m_hDriver</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="kr">__try</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">CloseHandle</span><span class="p">(</span><span class="n">m_hDriver</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="kr">__except</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">BOOL</span><span class="w"> </span><span class="nf">CloseDriver</span><span class="p">(</span><span class="n">HANDLE</span><span class="w"> </span><span class="n">m_hDriver</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kr">__try</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">CloseHandle</span><span class="p">(</span><span class="n">m_hDriver</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="kr">__except</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="kr">_inline</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="nf">CTL_CODE_GEN</span><span class="p">(</span><span class="n">DWORD</span><span class="w"> </span><span class="n">lngFunction</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">FILE_DEVICE_UNKNOWN</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">65536</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">FILE_ANY_ACCESS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">16384</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">lngFunction</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">METHOD_BUFFERED</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kr">_inline</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="nf">CTL_CODE_GEN</span><span class="p">(</span><span class="n">DWORD</span><span class="w"> </span><span class="n">lngFunction</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">(</span><span class="n">FILE_DEVICE_UNKNOWN</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">65536</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">FILE_ANY_ACCESS</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">16384</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="p">(</span><span class="n">lngFunction</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">METHOD_BUFFERED</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="n">BOOL</span><span class="w"> </span><span class="nf">ControlDriver</span><span class="p">(</span><span class="n">HANDLE</span><span class="w"> </span><span class="n">m_hDriver</span><span class="p">,</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dwIoCode</span><span class="p">,</span><span class="w"> </span><span class="n">PVOID</span><span class="w"> </span><span class="n">InBuff</span><span class="p">,</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">InBuffLen</span><span class="p">,</span><span class="w"> </span><span class="n">PVOID</span><span class="w"> </span><span class="n">OutBuff</span><span class="p">,</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">OutBuffLen</span><span class="p">,</span><span class="w"> </span><span class="n">DWORD</span><span class="o">*</span><span class="w"> </span><span class="n">RealRetBytes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">BOOL</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DeviceIoControl</span><span class="p">(</span><span class="n">m_hDriver</span><span class="p">,</span><span class="w"> </span><span class="n">CTL_CODE_GEN</span><span class="p">(</span><span class="n">dwIoCode</span><span class="p">),</span><span class="w"> </span><span class="n">InBuff</span><span class="p">,</span><span class="w"> </span><span class="n">InBuffLen</span><span class="p">,</span><span class="w"> </span><span class="n">OutBuff</span><span class="p">,</span><span class="w"> </span><span class="n">OutBuffLen</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dw</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">RealRetBytes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="o">*</span><span class="n">RealRetBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dw</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">BOOL</span><span class="w"> </span><span class="nf">ControlDriver</span><span class="p">(</span><span class="n">HANDLE</span><span class="w"> </span><span class="n">m_hDriver</span><span class="p">,</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dwIoCode</span><span class="p">,</span><span class="w"> </span><span class="n">PVOID</span><span class="w"> </span><span class="n">InBuff</span><span class="p">,</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">InBuffLen</span><span class="p">,</span><span class="w"> </span><span class="n">PVOID</span><span class="w"> </span><span class="n">OutBuff</span><span class="p">,</span><span class="w"> </span><span class="n">DWORD</span><span class="w"> </span><span class="n">OutBuffLen</span><span class="p">,</span><span class="w"> </span><span class="n">DWORD</span><span class="o">*</span><span class="w"> </span><span class="n">RealRetBytes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">DWORD</span><span class="w"> </span><span class="n">dw</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="n">BOOL</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DeviceIoControl</span><span class="p">(</span><span class="n">m_hDriver</span><span class="p">,</span><span class="w"> </span><span class="n">CTL_CODE_GEN</span><span class="p">(</span><span class="n">dwIoCode</span><span class="p">),</span><span class="w"> </span><span class="n">InBuff</span><span class="p">,</span><span class="w"> </span><span class="n">InBuffLen</span><span class="p">,</span><span class="w"> </span><span class="n">OutBuff</span><span class="p">,</span><span class="w"> </span><span class="n">OutBuffLen</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">dw</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">RealRetBytes</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="o">*</span><span class="n">RealRetBytes</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">dw</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="kt">void</span><span class="w"> </span><span class="nf">GetAppPath</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">szPathString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">GetModuleFileNameA</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">szPathString</span><span class="p">,</span><span class="w"> </span><span class="n">MAX_PATH</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">SIZE_T</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">szPathString</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">szPathString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;\\&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">szPathString</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="kt">void</span><span class="w"> </span><span class="nf">GetAppPath</span><span class="p">(</span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">szPathString</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">GetModuleFileNameA</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="n">szPathString</span><span class="p">,</span><span class="w"> </span><span class="n">MAX_PATH</span><span class="p">);</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">SIZE_T</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">strlen</span><span class="p">(</span><span class="n">szPathString</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">--</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">szPathString</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="sc">&#39;\\&#39;</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">szPathString</span><span class="p">[</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;\0&#39;</span><span class="p">;</span>
+<span class="w">            </span><span class="k">break</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="n">SC_HANDLE</span><span class="w"> </span><span class="nf">GetServiceHandle</span><span class="p">(</span><span class="n">PCHAR</span><span class="w"> </span><span class="n">m_pServiceName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hSCManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpenSCManagerA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">SC_MANAGER_ALL_ACCESS</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m_hSCManager</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpenServiceA</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">,</span><span class="w"> </span><span class="n">m_pServiceName</span><span class="p">,</span><span class="w"> </span><span class="n">SERVICE_ALL_ACCESS</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m_hService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">CloseServiceHandle</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">CloseServiceHandle</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">m_hService</span><span class="p">;</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="n">SC_HANDLE</span><span class="w"> </span><span class="nf">GetServiceHandle</span><span class="p">(</span><span class="n">PCHAR</span><span class="w"> </span><span class="n">m_pServiceName</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hSCManager</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpenSCManagerA</span><span class="p">(</span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="nb">NULL</span><span class="p">,</span><span class="w"> </span><span class="n">SC_MANAGER_ALL_ACCESS</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m_hSCManager</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">m_hService</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpenServiceA</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">,</span><span class="w"> </span><span class="n">m_pServiceName</span><span class="p">,</span><span class="w"> </span><span class="n">SERVICE_ALL_ACCESS</span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nb">NULL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">m_hService</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">CloseServiceHandle</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">);</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">CloseServiceHandle</span><span class="p">(</span><span class="n">m_hSCManager</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">m_hService</span><span class="p">;</span>
+<span class="p">}</span>
 
-<span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">g_hSc</span><span class="p">;</span><span class="w"></span>
-<span class="n">HANDLE</span><span class="w"> </span><span class="n">g_hDrv</span><span class="p">;</span><span class="w"></span>
+<span class="n">SC_HANDLE</span><span class="w"> </span><span class="n">g_hSc</span><span class="p">;</span>
+<span class="n">HANDLE</span><span class="w"> </span><span class="n">g_hDrv</span><span class="p">;</span>
 
-<span class="n">BOOLEAN</span><span class="w"> </span><span class="nf">DriverInit</span><span class="p">(</span><span class="n">BOOLEAN</span><span class="w"> </span><span class="n">IsInit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IsInit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<span class="n">BOOLEAN</span><span class="w"> </span><span class="nf">DriverInit</span><span class="p">(</span><span class="n">BOOLEAN</span><span class="w"> </span><span class="n">IsInit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">IsInit</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">        </span><span class="c1">//char szFileName[] = &quot;XXXX.sys&quot;;//TODO: CHANGE THIS VALUE</span>
 <span class="w">        </span><span class="c1">//char szLinkName[] = &quot;\\\\.\\XXXX&quot;;//TODO: CHANGE THIS VALUE       </span>
 <span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">szFileName</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;MyDriver1.sys&quot;</span><span class="p">;</span><span class="c1">//TODO: CHANGE THIS VALUE</span>
 <span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">szLinkName</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;</span><span class="se">\\\\</span><span class="s">.</span><span class="se">\\</span><span class="s">MyFirstSYM&quot;</span><span class="p">;</span><span class="c1">//TODO: CHANGE THIS VALUE</span>
-<span class="w">        </span><span class="n">CHAR</span><span class="w"> </span><span class="n">szDrvFile</span><span class="p">[</span><span class="n">MAX_PATH</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<span class="w">        </span><span class="n">GetAppPath</span><span class="p">(</span><span class="n">szDrvFile</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">strcat_s</span><span class="p">(</span><span class="n">szDrvFile</span><span class="p">,</span><span class="w"> </span><span class="n">szFileName</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="n">g_hSc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstallDriver</span><span class="p">(</span><span class="n">szDrvFile</span><span class="p">,</span><span class="w"> </span><span class="n">szFileName</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">g_hSc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="n">StartDriver</span><span class="p">(</span><span class="n">g_hSc</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="n">g_hDrv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpenDriver</span><span class="p">(</span><span class="n">szLinkName</span><span class="p">);</span><span class="w"></span>
-<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">g_hDrv</span><span class="p">)</span><span class="w"></span>
-<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">            </span><span class="k">else</span><span class="w"></span>
-<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">BOOLEAN</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CloseDriver</span><span class="p">(</span><span class="n">g_hDrv</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StopDriver</span><span class="p">(</span><span class="n">g_hSc</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RemoveDriver</span><span class="p">(</span><span class="n">g_hSc</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CloseServiceHandle</span><span class="p">(</span><span class="n">g_hSc</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
-<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">        </span><span class="n">CHAR</span><span class="w"> </span><span class="n">szDrvFile</span><span class="p">[</span><span class="n">MAX_PATH</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span>
+<span class="w">        </span><span class="n">GetAppPath</span><span class="p">(</span><span class="n">szDrvFile</span><span class="p">);</span>
+<span class="w">        </span><span class="n">strcat_s</span><span class="p">(</span><span class="n">szDrvFile</span><span class="p">,</span><span class="w"> </span><span class="n">szFileName</span><span class="p">);</span>
+<span class="w">        </span><span class="n">g_hSc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">InstallDriver</span><span class="p">(</span><span class="n">szDrvFile</span><span class="p">,</span><span class="w"> </span><span class="n">szFileName</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">g_hSc</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="n">StartDriver</span><span class="p">(</span><span class="n">g_hSc</span><span class="p">);</span>
+<span class="w">            </span><span class="n">g_hDrv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">OpenDriver</span><span class="p">(</span><span class="n">szLinkName</span><span class="p">);</span>
+<span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">g_hDrv</span><span class="p">)</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">            </span><span class="k">else</span>
+<span class="w">                </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">BOOLEAN</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CloseDriver</span><span class="p">(</span><span class="n">g_hDrv</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">StopDriver</span><span class="p">(</span><span class="n">g_hSc</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">RemoveDriver</span><span class="p">(</span><span class="n">g_hSc</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CloseServiceHandle</span><span class="p">(</span><span class="n">g_hSc</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="o">!</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="p">}</span>
 
-<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="n">BOOLEAN</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverInit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;load driver OK!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;load driver failed!&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">return</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span><span class="w"></span>
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="n">BOOLEAN</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverInit</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;load driver OK!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;load driver failed!&quot;</span><span class="p">);</span><span class="w"> </span><span class="k">return</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
 <span class="w">    </span><span class="c1">//ControlDriver(g_hDrv,0x800,0,0,0,0,0);</span>
-<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverInit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;unload driver OK!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;unload driver failed!&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverInit</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;unload driver OK!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">puts</span><span class="p">(</span><span class="s">&quot;unload driver failed!&quot;</span><span class="p">);</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">    </span><span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+<span class="p">}</span>
 </code></pre></div>
                 
                   

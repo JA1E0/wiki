@@ -47,6 +47,17 @@
     
       
 
+  
+
+
+  
+
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-H95YL3C9KG"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-H95YL3C9KG",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H95YL3C9KG"></script>
+
 
     
     
@@ -1119,66 +1130,66 @@
 </li>
 </ol>
 <div class="highlight"><pre><span></span><code>┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
-└─$ curl baidu.com                                                                                             <span class="m">2</span> ⨯
-curl: <span class="o">(</span><span class="m">6</span><span class="o">)</span> Could not resolve host: baidu.com
+└─$<span class="w"> </span>curl<span class="w"> </span>baidu.com<span class="w">                                                                                             </span><span class="m">2</span><span class="w"> </span>⨯
+curl:<span class="w"> </span><span class="o">(</span><span class="m">6</span><span class="o">)</span><span class="w"> </span>Could<span class="w"> </span>not<span class="w"> </span>resolve<span class="w"> </span>host:<span class="w"> </span>baidu.com
 
 ┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
-└─$ sudo nano /etc/network/interfaces                   
+└─$<span class="w"> </span>sudo<span class="w"> </span>nano<span class="w"> </span>/etc/network/interfaces<span class="w">                   </span>
 
 ┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
-└─$ cat /etc/network/interfaces
+└─$<span class="w"> </span>cat<span class="w"> </span>/etc/network/interfaces
 <span class="c1"># This file describes the network interfaces available on your system</span>
 <span class="c1"># and how to activate them. For more information, see interfaces(5).</span>
 
-<span class="nb">source</span> /etc/network/interfaces.d/*
+<span class="nb">source</span><span class="w"> </span>/etc/network/interfaces.d/*
 
 <span class="c1"># The loopback network interface</span>
-auto lo
-iface lo inet loopback
+auto<span class="w"> </span>lo
+iface<span class="w"> </span>lo<span class="w"> </span>inet<span class="w"> </span>loopback
 
-auto eth0
-iface eth0 inet dhcp
-address <span class="m">192</span>.168.253.0 <span class="c1">#修改成上述的subnet IP</span>
-netmask <span class="m">255</span>.255.255.0
-gateway <span class="m">192</span>.168.253.0 <span class="c1">#与address一致</span>
+auto<span class="w"> </span>eth0
+iface<span class="w"> </span>eth0<span class="w"> </span>inet<span class="w"> </span>dhcp
+address<span class="w"> </span><span class="m">192</span>.168.253.0<span class="w"> </span><span class="c1">#修改成上述的subnet IP</span>
+netmask<span class="w"> </span><span class="m">255</span>.255.255.0
+gateway<span class="w"> </span><span class="m">192</span>.168.253.0<span class="w"> </span><span class="c1">#与address一致</span>
 
 
 ┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
-└─$ /etc/init.d/networking restart 
-Restarting networking <span class="o">(</span>via systemctl<span class="o">)</span>: networking.service<span class="o">====</span> AUTHENTICATING FOR org.freedesktop.systemd1.manage-units <span class="o">===</span>
-Authentication is required to restart <span class="s1">&#39;networking.service&#39;</span>.
-Authenticating as: koko,,, <span class="o">(</span>koko<span class="o">)</span>
-Password: 
-<span class="o">====</span> AUTHENTICATION <span class="nv">COMPLETE</span> <span class="o">===</span>
+└─$<span class="w"> </span>/etc/init.d/networking<span class="w"> </span>restart<span class="w"> </span>
+Restarting<span class="w"> </span>networking<span class="w"> </span><span class="o">(</span>via<span class="w"> </span>systemctl<span class="o">)</span>:<span class="w"> </span>networking.service<span class="o">====</span><span class="w"> </span>AUTHENTICATING<span class="w"> </span>FOR<span class="w"> </span>org.freedesktop.systemd1.manage-units<span class="w"> </span><span class="o">===</span>
+Authentication<span class="w"> </span>is<span class="w"> </span>required<span class="w"> </span>to<span class="w"> </span>restart<span class="w"> </span><span class="s1">&#39;networking.service&#39;</span>.
+Authenticating<span class="w"> </span>as:<span class="w"> </span>koko,,,<span class="w"> </span><span class="o">(</span>koko<span class="o">)</span>
+Password:<span class="w"> </span>
+<span class="o">====</span><span class="w"> </span>AUTHENTICATION<span class="w"> </span><span class="nv">COMPLETE</span><span class="w"> </span><span class="o">===</span>
 .
 
 ┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
-└─$ systemctl status networking.service 
-● networking.service - Raise network interfaces
-     Loaded: loaded <span class="o">(</span>/lib/systemd/system/networking.service<span class="p">;</span> enabled<span class="p">;</span> vendor preset: enabled<span class="o">)</span>
-     Active: active <span class="o">(</span>exited<span class="o">)</span> since Wed <span class="m">2022</span>-03-16 <span class="m">21</span>:54:04 EDT<span class="p">;</span> 12s ago
-       Docs: man:interfaces<span class="o">(</span><span class="m">5</span><span class="o">)</span>
-    Process: <span class="m">2334</span> <span class="nv">ExecStart</span><span class="o">=</span>/sbin/ifup -a --read-environment <span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited, <span class="nv">status</span><span class="o">=</span><span class="m">0</span>/SUCCESS<span class="o">)</span>
-   Main PID: <span class="m">2334</span> <span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited, <span class="nv">status</span><span class="o">=</span><span class="m">0</span>/SUCCESS<span class="o">)</span>
-      Tasks: <span class="m">4</span> <span class="o">(</span>limit: <span class="m">4600</span><span class="o">)</span>
-     Memory: <span class="m">1</span>.8M
-        CPU: 123ms
-     CGroup: /system.slice/networking.service
-             └─2365 /sbin/dhclient -4 -v -i -pf /run/dhclient.eth0.pid -lf /var/lib/dhcp/dhclient.eth0.leases -I -&gt;
+└─$<span class="w"> </span>systemctl<span class="w"> </span>status<span class="w"> </span>networking.service<span class="w"> </span>
+●<span class="w"> </span>networking.service<span class="w"> </span>-<span class="w"> </span>Raise<span class="w"> </span>network<span class="w"> </span>interfaces
+<span class="w">     </span>Loaded:<span class="w"> </span>loaded<span class="w"> </span><span class="o">(</span>/lib/systemd/system/networking.service<span class="p">;</span><span class="w"> </span>enabled<span class="p">;</span><span class="w"> </span>vendor<span class="w"> </span>preset:<span class="w"> </span>enabled<span class="o">)</span>
+<span class="w">     </span>Active:<span class="w"> </span>active<span class="w"> </span><span class="o">(</span>exited<span class="o">)</span><span class="w"> </span>since<span class="w"> </span>Wed<span class="w"> </span><span class="m">2022</span>-03-16<span class="w"> </span><span class="m">21</span>:54:04<span class="w"> </span>EDT<span class="p">;</span><span class="w"> </span>12s<span class="w"> </span>ago
+<span class="w">       </span>Docs:<span class="w"> </span>man:interfaces<span class="o">(</span><span class="m">5</span><span class="o">)</span>
+<span class="w">    </span>Process:<span class="w"> </span><span class="m">2334</span><span class="w"> </span><span class="nv">ExecStart</span><span class="o">=</span>/sbin/ifup<span class="w"> </span>-a<span class="w"> </span>--read-environment<span class="w"> </span><span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited,<span class="w"> </span><span class="nv">status</span><span class="o">=</span><span class="m">0</span>/SUCCESS<span class="o">)</span>
+<span class="w">   </span>Main<span class="w"> </span>PID:<span class="w"> </span><span class="m">2334</span><span class="w"> </span><span class="o">(</span><span class="nv">code</span><span class="o">=</span>exited,<span class="w"> </span><span class="nv">status</span><span class="o">=</span><span class="m">0</span>/SUCCESS<span class="o">)</span>
+<span class="w">      </span>Tasks:<span class="w"> </span><span class="m">4</span><span class="w"> </span><span class="o">(</span>limit:<span class="w"> </span><span class="m">4600</span><span class="o">)</span>
+<span class="w">     </span>Memory:<span class="w"> </span><span class="m">1</span>.8M
+<span class="w">        </span>CPU:<span class="w"> </span>123ms
+<span class="w">     </span>CGroup:<span class="w"> </span>/system.slice/networking.service
+<span class="w">             </span>└─2365<span class="w"> </span>/sbin/dhclient<span class="w"> </span>-4<span class="w"> </span>-v<span class="w"> </span>-i<span class="w"> </span>-pf<span class="w"> </span>/run/dhclient.eth0.pid<span class="w"> </span>-lf<span class="w"> </span>/var/lib/dhcp/dhclient.eth0.leases<span class="w"> </span>-I<span class="w"> </span>-&gt;
 
 
 ┌──<span class="o">(</span>koko㉿kali<span class="o">)</span>-<span class="o">[</span>~<span class="o">]</span>
-└─$ ping baidu.com                                                                                           <span class="m">130</span> ⨯
-PING baidu.com <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span> <span class="m">56</span><span class="o">(</span><span class="m">84</span><span class="o">)</span> bytes of data.
-<span class="m">64</span> bytes from <span class="m">220</span>.181.38.251 <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">1</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">128</span> <span class="nv">time</span><span class="o">=</span><span class="m">34</span>.5 ms
-<span class="m">64</span> bytes from <span class="m">220</span>.181.38.251 <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">2</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">128</span> <span class="nv">time</span><span class="o">=</span><span class="m">35</span>.8 ms
-<span class="m">64</span> bytes from <span class="m">220</span>.181.38.251 <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">3</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">128</span> <span class="nv">time</span><span class="o">=</span><span class="m">35</span>.3 ms
-<span class="m">64</span> bytes from <span class="m">220</span>.181.38.251 <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">4</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">128</span> <span class="nv">time</span><span class="o">=</span><span class="m">36</span>.1 ms
-<span class="m">64</span> bytes from <span class="m">220</span>.181.38.251 <span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>: <span class="nv">icmp_seq</span><span class="o">=</span><span class="m">5</span> <span class="nv">ttl</span><span class="o">=</span><span class="m">128</span> <span class="nv">time</span><span class="o">=</span><span class="m">34</span>.9 ms
+└─$<span class="w"> </span>ping<span class="w"> </span>baidu.com<span class="w">                                                                                           </span><span class="m">130</span><span class="w"> </span>⨯
+PING<span class="w"> </span>baidu.com<span class="w"> </span><span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span><span class="w"> </span><span class="m">56</span><span class="o">(</span><span class="m">84</span><span class="o">)</span><span class="w"> </span>bytes<span class="w"> </span>of<span class="w"> </span>data.
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">220</span>.181.38.251<span class="w"> </span><span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">1</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">128</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">34</span>.5<span class="w"> </span>ms
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">220</span>.181.38.251<span class="w"> </span><span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">2</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">128</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">35</span>.8<span class="w"> </span>ms
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">220</span>.181.38.251<span class="w"> </span><span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">128</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">35</span>.3<span class="w"> </span>ms
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">220</span>.181.38.251<span class="w"> </span><span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">4</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">128</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">36</span>.1<span class="w"> </span>ms
+<span class="m">64</span><span class="w"> </span>bytes<span class="w"> </span>from<span class="w"> </span><span class="m">220</span>.181.38.251<span class="w"> </span><span class="o">(</span><span class="m">220</span>.181.38.251<span class="o">)</span>:<span class="w"> </span><span class="nv">icmp_seq</span><span class="o">=</span><span class="m">5</span><span class="w"> </span><span class="nv">ttl</span><span class="o">=</span><span class="m">128</span><span class="w"> </span><span class="nv">time</span><span class="o">=</span><span class="m">34</span>.9<span class="w"> </span>ms
 ^C
---- baidu.com ping statistics ---
-<span class="m">5</span> packets transmitted, <span class="m">5</span> received, <span class="m">0</span>% packet loss, <span class="nb">time</span> 4007ms
-rtt min/avg/max/mdev <span class="o">=</span> <span class="m">34</span>.450/35.321/36.077/0.587 ms
+---<span class="w"> </span>baidu.com<span class="w"> </span>ping<span class="w"> </span>statistics<span class="w"> </span>---
+<span class="m">5</span><span class="w"> </span>packets<span class="w"> </span>transmitted,<span class="w"> </span><span class="m">5</span><span class="w"> </span>received,<span class="w"> </span><span class="m">0</span>%<span class="w"> </span>packet<span class="w"> </span>loss,<span class="w"> </span><span class="nb">time</span><span class="w"> </span>4007ms
+rtt<span class="w"> </span>min/avg/max/mdev<span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">34</span>.450/35.321/36.077/0.587<span class="w"> </span>ms
 </code></pre></div>
                 
               

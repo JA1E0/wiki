@@ -47,6 +47,17 @@
     
       
 
+  
+
+
+  
+
+  
+
+
+  <script>function gtag(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],gtag("js",new Date),gtag("config","G-H95YL3C9KG"),document.addEventListener("DOMContentLoaded",function(){"undefined"!=typeof location$&&location$.subscribe(function(t){gtag("config","G-H95YL3C9KG",{page_path:t.pathname})})})</script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H95YL3C9KG"></script>
+
 
     
     
@@ -1176,24 +1187,24 @@
                 
                 <h2 id="createprocess">CreateProcess<a class="headerlink" href="#createprocess" title="Permanent link">&para;</a></h2>
 <h3 id="createsuspendprocess">CreateSuspendProcess<a class="headerlink" href="#createsuspendprocess" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><span class="n">STARTUPINFOA</span><span class="w"> </span><span class="n">StartupInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
-<span class="n">PROCESS_INFORMATION</span><span class="w"> </span><span class="n">ProcessInformation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="n">STARTUPINFOA</span><span class="w"> </span><span class="n">StartupInfo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span>
+<span class="n">PROCESS_INFORMATION</span><span class="w"> </span><span class="n">ProcessInformation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="mi">0</span><span class="w"> </span><span class="p">};</span>
 <span class="c1">//创建挂起的进程</span>
-<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">CreateProcessA</span><span class="p">(</span><span class="w"></span>
-<span class="w">    </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="n">pDestCmdLine</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="w"> </span><span class="o">!</span><span class="n">CreateProcessA</span><span class="p">(</span>
+<span class="w">    </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="n">pDestCmdLine</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">0</span><span class="p">,</span>
 <span class="w">    </span><span class="n">CREATE_SUSPENDED</span><span class="p">,</span><span class="w"> </span><span class="c1">//0x00000004</span>
-<span class="w">    </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="mi">0</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="o">&amp;</span><span class="n">StartupInfo</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="o">&amp;</span><span class="n">ProcessInformation</span><span class="w"></span>
-<span class="p">))</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">        </span><span class="n">DEBUG_ERROR</span><span class="p">(</span><span class="s">&quot;[-]创建失败&quot;</span><span class="p">);</span><span class="w"></span>
-<span class="w">        </span><span class="k">break</span><span class="p">;</span><span class="w"></span>
-<span class="w">    </span><span class="p">}</span><span class="w"></span>
+<span class="w">    </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">StartupInfo</span><span class="p">,</span>
+<span class="w">    </span><span class="o">&amp;</span><span class="n">ProcessInformation</span>
+<span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="n">DEBUG_ERROR</span><span class="p">(</span><span class="s">&quot;[-]创建失败&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="k">break</span><span class="p">;</span>
+<span class="w">    </span><span class="p">}</span>
 </code></pre></div>
                 
                   
