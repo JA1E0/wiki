@@ -1,1 +1,1 @@
-py -3.9 -m mkdocs build
+py -3.11 -m mkdocs build
